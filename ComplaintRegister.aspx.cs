@@ -7,8 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace CriminalRecordManagement
 {
-    public partial class _Default : Page
+    public partial class ComplaintRegister : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

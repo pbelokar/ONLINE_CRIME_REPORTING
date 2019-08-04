@@ -42,5 +42,10 @@ namespace CriminalRecordManagement.DataLayer
             return ds;
         }
 
+        public void SaveCriminalRegister()
+        {
+
+        }
+
     }
 }

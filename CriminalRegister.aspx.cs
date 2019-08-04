@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CriminalRecordManagement.DataLayer;
 
 namespace CriminalRecordManagement
 {
@@ -26,7 +27,10 @@ namespace CriminalRecordManagement
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-
+            if (txtCriminalNo.Text == "")
+                return;
+            clsCriminalRegistration crmnl = new clsCriminalRegistration();
+            crmnl.SaveCriminalRegister();
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

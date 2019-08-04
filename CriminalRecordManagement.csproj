@@ -106,6 +106,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ChargeSheet.aspx" />
+    <Content Include="ComplaintRegister.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -115,6 +117,7 @@
     <Content Include="CriminalRegister.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="FIRRegister.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -127,6 +130,9 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Login.aspx" />
+    <Content Include="MostWanted.aspx" />
+    <Content Include="PostMortem.aspx" />
+    <Content Include="PrisonerRegister.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -173,6 +179,20 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ChargeSheet.aspx.cs">
+      <DependentUpon>ChargeSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChargeSheet.aspx.designer.cs">
+      <DependentUpon>ChargeSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComplaintRegister.aspx.cs">
+      <DependentUpon>ComplaintRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplaintRegister.aspx.designer.cs">
+      <DependentUpon>ComplaintRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +217,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FIRRegister.aspx.cs">
+      <DependentUpon>FIRRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FIRRegister.aspx.designer.cs">
+      <DependentUpon>FIRRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -206,6 +233,27 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MostWanted.aspx.cs">
+      <DependentUpon>MostWanted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MostWanted.aspx.designer.cs">
+      <DependentUpon>MostWanted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostMortem.aspx.cs">
+      <DependentUpon>PostMortem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostMortem.aspx.designer.cs">
+      <DependentUpon>PostMortem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrisonerRegister.aspx.cs">
+      <DependentUpon>PrisonerRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrisonerRegister.aspx.designer.cs">
+      <DependentUpon>PrisonerRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

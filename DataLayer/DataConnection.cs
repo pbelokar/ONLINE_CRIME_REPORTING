@@ -21,7 +21,8 @@ namespace CriminalRecordManagement.DataLayer
 
         ~DataConnection()
         {
-            con.Close();
+            //if(con.State == ConnectionState.Open)
+            //con.Close();
         }
 
         public SqlConnection getConnection()

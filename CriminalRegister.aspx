@@ -1,6 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CriminalRegister.aspx.cs" Inherits="CriminalRecordManagement.CriminalRegister" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CriminalRegister.aspx.cs" Inherits="CriminalRecordManagement.CriminalRegister" MasterPageFile ="~/Site.Master" %>
 
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -8,7 +8,9 @@
     
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">--%>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <div>
             <table>
 
@@ -107,6 +109,7 @@
 
             </table>
         </div>
-    </form>
+    </asp:Content>
+    <%--</form>
 </body>
-</html>
+</html>--%>
