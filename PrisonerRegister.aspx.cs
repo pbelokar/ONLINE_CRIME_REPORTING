@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CriminalRecordManagement.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,56 @@ namespace CriminalRecordManagement
             }
 
             return true;
+
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+
+            clsPrisonerRegister prisonerRegister = new clsPrisonerRegister();
+            prisonerRegister.ChargeSheetNo = Convert.ToInt32(txtChargeSheetNo.Text);
+            prisonerRegister.NickName = txtNickName.Text;
+            prisonerRegister.TypeofCrime = txtTypeofCrime.Text;
+            prisonerRegister.FamilyMembers = txtFamilyMember.Text;
+            prisonerRegister.IdentificationMark = txtIdentificationMark.Text;
+            prisonerRegister.Height = txtHeight.Text;
+            prisonerRegister.Weight = Convert.ToInt32(txtWeight.Text);
+            prisonerRegister.Color = txtColor.Text;
+
+            try
+            {
+
+                prisonerRegister.AddPrisoner();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            ClearAll();
+
+            lblMessage.Text = "Prisoner record has been added successfully.";
+
+
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void ClearAll()
+        {
+            txtChargeSheetNo.Text = "";
+            txtNickName.Text = "";
+            txtTypeofCrime.Text = "";
+            txtFamilyMember.Text = "";
+            txtIdentificationMark.Text = "";
+            txtHeight.Text = "";
+            txtWeight.Text = "";
+            txtColor.Text = "";
 
         }
     }

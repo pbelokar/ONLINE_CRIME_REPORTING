@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CriminalRecordManagement.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,6 +27,41 @@ namespace CriminalRecordManagement
 
             return true;
 
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            clsChargeSheet chargeSheet = new clsChargeSheet();
+            chargeSheet.CsNameofPoliceStation = txtNameofPoliceStation.Text;
+            chargeSheet.CsDate = Convert.ToDateTime(txtDate.Text);
+            chargeSheet.CsFIRNo = Convert.ToInt32(txtFIRNo.Text);
+            chargeSheet.CsDistrict = txtDistrict.Text;
+
+            try
+            {
+                chargeSheet.AddChargeSheet();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+            ClearAllTextBox();
+            lblMessage.Text = "Charge Sheet has been created successfully.";
+        }
+
+        public void ClearAllTextBox()
+        {
+            txtDate.Text = "";
+            txtDistrict.Text = "";
+            txtNameofPoliceStation.Text = "";
+            txtFIRNo.Text = "";
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearAllTextBox();
         }
     }
 }

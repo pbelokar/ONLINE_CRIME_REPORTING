@@ -28,8 +28,8 @@ namespace CriminalRecordManagement.DataLayer
         {
             int strRoleId = -1;
             SqlCommand cmd = new SqlCommand();
-            cmd.Connection = dc.getConnection(); 
-            cmd.CommandText = "select * from [dbo].[tblUsers] where UserName = '" + strusername + "' and Password = '" + strpassword + "'";
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "select * from [dbo].[tblUsers] where UserName = '" + strusername + "' and Password = '" + strpassword + "' and IsActive = 1";
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataSet ds = new DataSet();
@@ -48,7 +48,7 @@ namespace CriminalRecordManagement.DataLayer
         public DataSet getAllUser()
         {
             DataSet dsUsers = new DataSet();
-           
+
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = dc.getConnection();
             cmd.CommandText = "select * from [dbo].[tblUsers]";
@@ -58,6 +58,30 @@ namespace CriminalRecordManagement.DataLayer
             da.Fill(dsUsers, "users");
 
             return dsUsers;
+        }
+
+        public Boolean AddUser(clsUserManagement newuser)
+        {
+            string SQL = "CriminalRecordRegister";
+            SqlConnection con = dc.getConnection();
+            SqlCommand cmd = new SqlCommand(SQL, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlParameter paramUserName = cmd.Parameters.Add("@UserName", SqlDbType.VarChar, 50);
+            SqlParameter paramPassword = cmd.Parameters.Add("@Password", SqlDbType.VarChar, 50);
+            SqlParameter paramFirstName = cmd.Parameters.Add("@FirstName", SqlDbType.VarChar, 50);
+            SqlParameter paramLastName = cmd.Parameters.Add("@LastName", SqlDbType.VarChar, 50);
+            paramUserName.Value = newuser.UserName;
+            paramPassword.Value = newuser.Password;
+            paramFirstName.Value = newuser.FirstName;
+            paramLastName.Value = newuser.LastName;
+
+            if (con.State != ConnectionState.Open)
+            con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            con.Close();
+
+            return true;
+        
         }
     }
 }

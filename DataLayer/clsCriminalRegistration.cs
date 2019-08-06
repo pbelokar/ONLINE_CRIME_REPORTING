@@ -16,7 +16,7 @@ namespace CriminalRecordManagement.DataLayer
         private string occupation;
         private string crimeType;
         private string address;
-        private string mostWanted;
+        private Boolean mostWanted;
 
         public int CriminalNo { get => criminalNo; set => criminalNo = value; }
         public string CriminalName { get => criminalName; set => criminalName = value; }
@@ -25,7 +25,7 @@ namespace CriminalRecordManagement.DataLayer
         public string Occupation { get => occupation; set => occupation = value; }
         public string CrimeType { get => crimeType; set => crimeType = value; }
         public string Address { get => address; set => address = value; }
-        public string MostWanted { get => mostWanted; set => mostWanted = value; }
+        public Boolean MostWanted { get => mostWanted; set => mostWanted = value; }
         DataConnection dc = new DataConnection();
         public DataSet getAllCriminalRecords()
         {
@@ -42,9 +42,37 @@ namespace CriminalRecordManagement.DataLayer
             return ds;
         }
 
-        public void SaveCriminalRegister()
+        public Boolean SaveCriminalRegister(clsCriminalRegistration criminalRegistration)
         {
+            string SQL = "CriminalRecordCriminalRegister";
+            SqlConnection con = dc.getConnection();
+            SqlCommand cmd = new SqlCommand(SQL, con);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            SqlParameter prCrName = cmd.Parameters.Add("@CrName", SqlDbType.VarChar, 50);
+            SqlParameter prCrNickName = cmd.Parameters.Add("@CrNickName", SqlDbType.VarChar, 50);
+            SqlParameter prcrAge = cmd.Parameters.Add("@crAge ", SqlDbType.Int);
+            SqlParameter prcrOccupation = cmd.Parameters.Add("@crOccupation", SqlDbType.VarChar, 50);
+            SqlParameter prcrCrimeType = cmd.Parameters.Add("@crCrimeType", SqlDbType.VarChar, 50);
+            SqlParameter prcrAddress = cmd.Parameters.Add("@crAddress", SqlDbType.VarChar, 50);
+            SqlParameter prCrMostWanted = cmd.Parameters.Add("@CrMostWanted", SqlDbType.Bit);
+
+
+            prCrName.Value = criminalRegistration.criminalName;
+            prCrNickName.Value = criminalRegistration.criminalNickName;
+            prcrAge.Value = criminalRegistration.age;
+            prcrOccupation.Value = criminalRegistration.occupation;
+            prcrCrimeType.Value = criminalRegistration.crimeType;
+            prcrAddress.Value = criminalRegistration.address;
+            prCrMostWanted.Value = criminalRegistration.mostWanted;
+                                 
+
+            if (con.State != ConnectionState.Open)
+                con.Open();
+            int rowsAffected = cmd.ExecuteNonQuery();
+            con.Close();
+
+            return true;
         }
 
     }

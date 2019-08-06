@@ -85,13 +85,13 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.WebControls.TextBox txtComplaintDate;
         
         /// <summary>
-        /// txtNationality  control.
+        /// txtNationality control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNationality ;
+        protected global::System.Web.UI.WebControls.TextBox txtNationality;
         
         /// <summary>
         /// btnSave control.
@@ -110,5 +110,14 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+        
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

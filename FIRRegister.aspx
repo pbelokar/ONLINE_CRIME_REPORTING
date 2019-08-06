@@ -117,11 +117,18 @@
 
         <tr>
             <td>
-                <asp:Button ID="btnSave" runat="server" Text="Save" />
+                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
             </td>
             <td>
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
             </td>
+        </tr>
+
+         <tr>
+            <td colspan="2">
+                <asp:Label ID="lblMessage" runat="server" Text ="" ForeColor="Green"></asp:Label>
+            </td>
+            
         </tr>
 
     </table>

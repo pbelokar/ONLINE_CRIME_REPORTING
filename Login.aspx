@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CriminalRecordManagement.Login" %>
+﻿
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CriminalRecordManagement.Login" %>
 
 <!DOCTYPE html>
 
@@ -7,14 +8,14 @@
 
   <meta charset="UTF-8"/>
 
-    <title>Log-in</title>
+    <title>LogIn</title>
     <link rel='stylesheet' href='http://codepen.io/assets/libs/fullpage/jquery-ui.css'/>
     <link href="Scripts/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body style="background-image: url(Images/Police_Line.jpg); width:100%; height:100%;">
     <div class="login-card">
-        <h1>Log-in</h1>
+        <h1>LogIn</h1>
         <form runat ="server">
             <asp:Label ID="lblerror" runat="server" Font-Size="Small" ForeColor="Red"></asp:Label>
             <br/>
@@ -25,7 +26,7 @@
         </form>
 
         <div class="login-help">
-            <a href="#">Register</a> • <a href="#">Forgot Password</a>
+            <a href="Register">Register</a>
         </div>
     </div>
 </body>

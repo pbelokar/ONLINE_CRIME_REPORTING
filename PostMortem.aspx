@@ -44,6 +44,7 @@
             </td>
             <td>
                 <asp:TextBox ID="txtDateofDeath" runat="server"></asp:TextBox>
+                
             </td>
         </tr>
 
@@ -85,7 +86,7 @@
 
         <tr>
             <td>
-               <asp:Button ID="btnSave" runat="server" Text="Save"/>
+               <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"/>
             </td>
             <td>
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel"/>

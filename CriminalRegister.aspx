@@ -1,15 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CriminalRegister.aspx.cs" Inherits="CriminalRecordManagement.CriminalRegister" MasterPageFile ="~/Site.Master" %>
 
-<%--<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    
-</head>
-<body>
-    <form id="form1" runat="server">--%>
-
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <div>
             <table>
@@ -107,9 +97,16 @@
                     </td>
                 </tr>
 
+                 <tr>
+                    <td colspan ="2">
+
+                        <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
+
+                    </td>
+                   
+                </tr>
+
             </table>
         </div>
     </asp:Content>
-    <%--</form>
-</body>
-</html>--%>
+
