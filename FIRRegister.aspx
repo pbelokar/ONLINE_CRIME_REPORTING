@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FIRRegister.aspx.cs" Inherits="CriminalRecordManagement.FIRRegister" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <style type='text/css'>
+        body { background-image: url(images/fir.jpg); height:100%; width:100%; background-size:cover; }
+    </style>
+    
     <table>
 
         <tr>

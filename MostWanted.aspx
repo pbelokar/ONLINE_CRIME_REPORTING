@@ -3,6 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <table>
 
+        <style type='text/css'>
+        body { background-image: url(images/Most-Wantedjpg.jpg); height:100%; width:100%; background-size:cover; }
+    </style>
+        
          <tr>
             <td>ID :
             </td>

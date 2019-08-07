@@ -2,7 +2,12 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <table>
+    <style type='text/css'>
+        body { background-image: url(images/Charge_Sheet.jpg); height:100%; width:100%; background-size:cover; }
+    </style>
+
+    <tr>
+    <td><table>
 
         <tr>
             <td>Charge Sheet No. :
@@ -61,5 +66,8 @@
         </tr>
 
     </table>
+
+    </td>
+</tr>
 
 </asp:Content>

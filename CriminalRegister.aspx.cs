@@ -26,26 +26,26 @@ namespace CriminalRecordManagement
             if (!IsPostBack)
             {
                 checkUser();
-                FillRadioButton();
+                //FillRadioButton();
             }
         }
 
-        public void FillRadioButton()
-        {
-            rdmostWated.Items.Add(new ListItem("Yes", "1"));
-            rdmostWated.Items.Add(new ListItem("No", "0"));
-        }
+        //public void FillRadioButton()
+        //{
+        //    rdmostWated.Items.Add(new ListItem("Yes", "1"));
+        //    rdmostWated.Items.Add(new ListItem("No", "0"));
+        //}
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsCriminalRegistration crmnl = new clsCriminalRegistration();
-            crmnl.CriminalName = txtCriminalName.Text;
-            crmnl.CriminalNickName = txtcrNickName.Text;
-            crmnl.Age = Convert.ToInt32(txtAge.Text);
-            crmnl.Occupation = txtOccupation.Text;
-            crmnl.CrimeType = txtCrimeType.Text;
-            crmnl.Address = txtAddress.Text;
-            crmnl.MostWanted = Convert.ToBoolean(Convert.ToInt32(rdmostWated.SelectedValue));
+            crmnl.CriminalName = txtCriminalName.Value;
+            crmnl.CriminalNickName = txtcrNickName.Value;
+            crmnl.Age = Convert.ToInt32(txtAge.Value);
+            crmnl.Occupation = txtOccupation.Value;
+            crmnl.CrimeType = txtCrimeType.Value;
+            crmnl.Address = txtAddress.Value;
+            crmnl.MostWanted = Convert.ToBoolean(rdmostWatedYes.Checked ? 1 : 0) ;
 
             try
             {
@@ -68,15 +68,14 @@ namespace CriminalRecordManagement
 
         public void ClearAllTextBox()
         {
-            txtCriminalNo.Text = "";
-            txtCriminalName.Text = "";
-            txtCriminalName.Text = "";
-            txtcrNickName.Text = "";
-            txtAge.Text = "";
-            txtOccupation.Text = "";
-            txtCrimeType.Text = "";
-            txtAddress.Text = "";
-            rdmostWated.SelectedValue = default;
+            
+            txtCriminalName.Value = "";
+            
+            txtcrNickName.Value = "";
+            txtAge.Value = "";
+            txtOccupation.Value = "";
+            txtCrimeType.Value = "";
+            txtAddress.Value = "";
 
         }
     }

@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="PostMortem.aspx.cs" Inherits="CriminalRecordManagement.PostMortem" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <style type='text/css'>
+        body { background-image: url(images/Post_Mortem.png); height:100%; width:100%; background-size:cover; }
+    </style>
+    
     <table>
         
         <tr>

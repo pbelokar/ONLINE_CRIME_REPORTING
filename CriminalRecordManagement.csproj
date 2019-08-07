@@ -129,7 +129,15 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Images\Charge_Sheet.jpg" />
+    <Content Include="Images\Complaint_Register.jpg" />
+    <Content Include="Images\criminal-records-checks.jpg" />
+    <Content Include="Images\fir.jpg" />
+    <Content Include="Images\Most-Wantedjpg.jpg" />
+    <Content Include="Images\Police_Badge.jpg" />
     <Content Include="Images\Police_Line.jpg" />
+    <Content Include="Images\Post_Mortem.png" />
+    <Content Include="Images\Prisoner_Register.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="MostWanted.aspx" />
     <Content Include="PostMortem.aspx" />

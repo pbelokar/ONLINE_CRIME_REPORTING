@@ -1,7 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ComplaintRegister.aspx.cs" Inherits="CriminalRecordManagement.ComplaintRegister" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server" >
+
+    <style type='text/css'>
+        body { background-image: url(images/Complaint_Register.jpg); height:100%; width:100%; background-size:cover; }
+    </style>
+
+    <tr>
+    <td><table>
 
         <tr>
             <td>Complaint No. :
@@ -92,5 +98,8 @@
         </tr>
 
     </table>
+
+    </td>
+</tr>
 
 </asp:Content>
