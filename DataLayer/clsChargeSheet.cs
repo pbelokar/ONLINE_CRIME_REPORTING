@@ -48,5 +48,24 @@ namespace CriminalRecordManagement.DataLayer
             return true;
 
         }
+
+        public int getChargeSheetCount()
+        {
+            int chargesheetCount = 1;
+            //sqlComm2.ExecuteScalar()
+
+            DataConnection con = new DataConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "SELECT max( [ChargeSheetNo]) + 1 FROM [dbo].[tblChargeSheet]";
+
+            object retuvalue = cmd.ExecuteScalar();
+            if (retuvalue != DBNull.Value)
+            {
+                chargesheetCount = Convert.ToInt32(retuvalue);
+            }
+            return chargesheetCount;
+        }
     }
 }

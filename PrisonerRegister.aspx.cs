@@ -14,6 +14,7 @@ namespace CriminalRecordManagement
         {
             if (!IsPostBack)
             {
+                displayPrisonRegCount();
                 checkUser();
             }
         }
@@ -33,19 +34,20 @@ namespace CriminalRecordManagement
         {
 
             clsPrisonerRegister prisonerRegister = new clsPrisonerRegister();
-            prisonerRegister.ChargeSheetNo = Convert.ToInt32(txtChargeSheetNo.Text);
-            prisonerRegister.NickName = txtNickName.Text;
-            prisonerRegister.TypeofCrime = txtTypeofCrime.Text;
-            prisonerRegister.FamilyMembers = txtFamilyMember.Text;
-            prisonerRegister.IdentificationMark = txtIdentificationMark.Text;
-            prisonerRegister.Height = txtHeight.Text;
-            prisonerRegister.Weight = Convert.ToInt32(txtWeight.Text);
-            prisonerRegister.Color = txtColor.Text;
+            prisonerRegister.ChargeSheetNo = Convert.ToInt32(txtChargeSheetNo.Value);
+            prisonerRegister.NickName = txtNickName.Value;
+            prisonerRegister.TypeofCrime = txtTypeofCrime.Value;
+            prisonerRegister.FamilyMembers = txtFamilyMember.Value;
+            prisonerRegister.IdentificationMark = txtIdentificationMark.Value;
+            prisonerRegister.Height = txtHeight.Value;
+            prisonerRegister.Weight = Convert.ToInt32(txtWeight.Value);
+            prisonerRegister.Color = txtColor.Value;
 
             try
             {
 
                 prisonerRegister.AddPrisoner();
+                displayPrisonRegCount();
 
             }
             catch (Exception ex)
@@ -68,15 +70,21 @@ namespace CriminalRecordManagement
 
         public void ClearAll()
         {
-            txtChargeSheetNo.Text = "";
-            txtNickName.Text = "";
-            txtTypeofCrime.Text = "";
-            txtFamilyMember.Text = "";
-            txtIdentificationMark.Text = "";
-            txtHeight.Text = "";
-            txtWeight.Text = "";
-            txtColor.Text = "";
+            txtChargeSheetNo.Value = "";
+            txtNickName.Value = "";
+            txtTypeofCrime.Value = "";
+            txtFamilyMember.Value = "";
+            txtIdentificationMark.Value = "";
+            txtHeight.Value = "";
+            txtWeight.Value = "";
+            txtColor.Value = "";
 
+        }
+
+        public void displayPrisonRegCount()
+        {
+            clsPrisonerRegister count = new clsPrisonerRegister();
+            txtPrisonerNo.Value = count.getPrisonRegCount().ToString();
         }
     }
 }

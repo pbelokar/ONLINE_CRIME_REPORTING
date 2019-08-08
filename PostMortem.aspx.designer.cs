@@ -19,7 +19,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPostMortelNo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPostMortelNo;
         
         /// <summary>
         /// txtFirNo control.
@@ -28,7 +28,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFirNo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFirNo;
         
         /// <summary>
         /// txtResultofMortem control.
@@ -37,7 +37,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtResultofMortem;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtResultofMortem;
         
         /// <summary>
         /// txtSex control.
@@ -46,7 +46,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSex;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSex;
         
         /// <summary>
         /// txtDateofDeath control.
@@ -55,7 +55,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDateofDeath;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDateofDeath;
         
         /// <summary>
         /// txtDescriptionofCase control.
@@ -64,7 +64,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescriptionofCase;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDescriptionofCase;
         
         /// <summary>
         /// txtHouseName control.
@@ -73,7 +73,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHouseName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtHouseName;
         
         /// <summary>
         /// txtDrName control.
@@ -82,7 +82,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDrName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDrName;
         
         /// <summary>
         /// txtPoliceStation control.
@@ -91,7 +91,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPoliceStation;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPoliceStation;
         
         /// <summary>
         /// btnSave control.
@@ -110,5 +110,14 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+        
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

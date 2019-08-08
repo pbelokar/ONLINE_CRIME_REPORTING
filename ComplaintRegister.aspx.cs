@@ -15,6 +15,7 @@ namespace CriminalRecordManagement
         {
             if (!IsPostBack)
             {
+                displayComplaintCount();
                 checkUser();
             }
         }
@@ -33,18 +34,19 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsComplaintRegister complaintRegister = new clsComplaintRegister();
-            complaintRegister.CmpName = txtName.Text;
-            complaintRegister.CmpOccupation = txtOccupation.Text;
-            complaintRegister.CmpDetailsofSuspect = txtDetailsofSuspect.Text;
-            complaintRegister.CmpAge = Convert.ToInt32(txtAge.Text);
-            complaintRegister.CmpSex = txtSex.Text;
-            complaintRegister.CmpFatherHusbandName = txtFatherHusbandName.Text;
-            complaintRegister.CmpDate = Convert.ToDateTime(txtComplaintDate.Text);
-            complaintRegister.CmdNationality = txtNationality.Text;
+            complaintRegister.CmpName = txtName.Value;
+            complaintRegister.CmpOccupation = txtOccupation.Value;
+            complaintRegister.CmpDetailsofSuspect = txtDetailsofSuspect.Value;
+            complaintRegister.CmpAge = Convert.ToInt32(txtAge.Value);
+            complaintRegister.CmpSex = txtSex.Value;
+            complaintRegister.CmpFatherHusbandName = txtFatherHusbandName.Value;
+            complaintRegister.CmpDate = Convert.ToDateTime(txtComplaintDate.Value);
+            complaintRegister.CmdNationality = txtNationality.Value;
 
             try
             {
                 complaintRegister.AddComplaint();
+                displayComplaintCount();
             }
             catch (Exception ex)
             {
@@ -65,14 +67,20 @@ namespace CriminalRecordManagement
         public void ClearAllTextBox()
         {
 
-            txtName.Text = "";
-            txtOccupation.Text = "";
-            txtDetailsofSuspect.Text = "";
-            txtAge.Text = "";
-            txtSex.Text = "";
-            txtFatherHusbandName.Text = "";
-            txtComplaintDate.Text = "";
-            txtNationality.Text = "";
+            txtName.Value = "";
+            txtOccupation.Value = "";
+            txtDetailsofSuspect.Value = "";
+            txtAge.Value = "";
+            txtSex.Value = "";
+            txtFatherHusbandName.Value = "";
+            txtComplaintDate.Value = "";
+            txtNationality.Value = "";
+        }
+
+        public void displayComplaintCount()
+        {
+            clsComplaintRegister count = new clsComplaintRegister();
+            txtComplaintNo.Value = count.getComplaintCount().ToString();
         }
     }
 }

@@ -9,9 +9,14 @@ namespace CriminalRecordManagement
 {
     public partial class SiteMaster : MasterPage
     {
+        string strusername;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
+
+
+
+
     }
 }

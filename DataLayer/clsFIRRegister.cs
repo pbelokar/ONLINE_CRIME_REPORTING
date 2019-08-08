@@ -80,5 +80,25 @@ namespace CriminalRecordManagement.DataLayer
 
             return true;
         }
+
+        public int getFirCount()
+        {
+            int firCount = 1;
+            //sqlComm2.ExecuteScalar()
+
+            DataConnection con = new DataConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "SELECT max( [FIRNo]) + 1 FROM [dbo].[tblFIRRegister]";
+
+            object retuvalue = cmd.ExecuteScalar();
+            if (retuvalue != DBNull.Value)
+            {
+                firCount = Convert.ToInt32(retuvalue);
+            }
+
+            return firCount;
+        }
     }
 }

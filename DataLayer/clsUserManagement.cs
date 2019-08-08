@@ -83,5 +83,17 @@ namespace CriminalRecordManagement.DataLayer
             return true;
         
         }
+
+        public Boolean UpdateUser(int isactive)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "UPDATE [dbo].[tblUsers] SET [IsActive] = "+ isactive + " WHERE UserId = "+ this.UserId;
+            cmd.ExecuteNonQuery();
+            
+            return true;
+        }
+
+
     }
 }

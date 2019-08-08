@@ -26,8 +26,10 @@ namespace CriminalRecordManagement
             if (!IsPostBack)
             {
                 checkUser();
+                displayCriminalCount();
                 //FillRadioButton();
             }
+            
         }
 
         //public void FillRadioButton()
@@ -50,6 +52,7 @@ namespace CriminalRecordManagement
             try
             {
                 crmnl.SaveCriminalRegister(crmnl);
+                displayCriminalCount();
             }
             catch (Exception ex)
             {
@@ -77,6 +80,12 @@ namespace CriminalRecordManagement
             txtCrimeType.Value = "";
             txtAddress.Value = "";
 
+        }
+
+        public void displayCriminalCount()
+        {
+            clsCriminalRegistration count = new clsCriminalRegistration();
+            txtCriminalNo.Value =  count.getCriminalCount().ToString();
         }
     }
 }

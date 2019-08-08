@@ -14,6 +14,7 @@ namespace CriminalRecordManagement
         {
             if (!IsPostBack)
             {
+                displayPostMortemCount();
                 checkUser();
             }
         }
@@ -32,25 +33,55 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsPostMortem postmortem = new clsPostMortem();
-            postmortem.PmFIRNo = Convert.ToInt32(txtFirNo.Text);
-            postmortem.PmResultofPostMortem = txtResultofMortem.Text;
-            postmortem.PmSex = txtSex.Text;
-            postmortem.PmDateofDeath = txtDateofDeath.Text;
-            postmortem.PmDescriptionofCase = txtDescriptionofCase.Text;
-            postmortem.PmHouseName = txtHouseName.Text;
-            postmortem.PmDrName = txtDrName.Text;
-            postmortem.PmPoliceStation = txtPoliceStation.Text;
+            postmortem.PmFIRNo = Convert.ToInt32(txtFirNo.Value);
+            postmortem.PmResultofPostMortem = txtResultofMortem.Value;
+            postmortem.PmSex = txtSex.Value;
+            postmortem.PmDateofDeath = txtDateofDeath.Value;
+            postmortem.PmDescriptionofCase = txtDescriptionofCase.Value;
+            postmortem.PmHouseName = txtHouseName.Value;
+            postmortem.PmDrName = txtDrName.Value;
+            postmortem.PmPoliceStation = txtPoliceStation.Value;
+
+            postmortem.AddRecPostMortem(postmortem);
 
             try
             {
                 Boolean success = postmortem.AddRecPostMortem(postmortem);
+                displayPostMortemCount();
             }
             catch (Exception ex)
             {
                 throw;
             }
 
+            ClearAllTextBox();
 
+            lblMessage.Text = "The Record has been created successfully.";
+
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearAllTextBox();
+        }
+
+        public void ClearAllTextBox()
+        {
+
+            txtResultofMortem.Value = "";
+            txtSex.Value = "";
+            txtDateofDeath.Value = "";
+            txtDescriptionofCase.Value = "";
+            txtHouseName.Value = "";
+            txtDrName.Value = "";
+            txtPoliceStation.Value = "";
+
+        }
+
+        public void displayPostMortemCount()
+        {
+            clsPostMortem count = new clsPostMortem();
+            txtPostMortelNo.Value = count.getPostMortemCount().ToString();
         }
     }
 }

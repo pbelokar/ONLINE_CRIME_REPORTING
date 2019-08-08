@@ -32,7 +32,7 @@ namespace CriminalRecordManagement
                 }
                 else
                 {
-                    Response.Redirect("UserManagement.aspx");
+                    Response.Redirect("default.aspx");
                 }
             }
             else

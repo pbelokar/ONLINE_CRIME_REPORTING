@@ -64,5 +64,25 @@ namespace CriminalRecordManagement.DataLayer
             return true;
         }
 
+        public int getPostMortemCount()
+        {
+            int postmortemCount = 1;
+            //sqlComm2.ExecuteScalar()
+
+            DataConnection con = new DataConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "SELECT max( [pmId]) + 1 FROM [dbo].[tblPostMortem]";
+
+            object retuvalue = cmd.ExecuteScalar();
+            if (retuvalue != DBNull.Value)
+            {
+                postmortemCount = Convert.ToInt32(retuvalue);
+            }
+            return postmortemCount;
+        }
+
+
     }
 }

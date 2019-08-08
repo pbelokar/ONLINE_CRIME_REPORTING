@@ -3,71 +3,63 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <style type='text/css'>
-        body { background-image: url(images/Charge_Sheet.jpg); height:100%; width:100%; background-size:cover; }
+        body {
+            background-image: url(images/Charge_Sheet.jpg);
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
     </style>
 
-    <tr>
-    <td><table>
+    <div class="form-group" style="background-color: white; width: 500px; padding: 10px;">
 
-        <tr>
-            <td>Charge Sheet No. :
-            </td>
-            <td>
-                <asp:TextBox ID="txtChargeSheetNo" runat="server"></asp:TextBox>
-            </td>
-        </tr>
+        <div class="form-group row col-sm-10" style="text-align: center; width: 152%">
+            <label for="title" class="col-sm-2 col-form-label">Charge Sheet</label>
 
-        <tr>
-            <td>Name of Police Station :
-            </td>
-            <td>
-                <asp:TextBox ID="txtNameofPoliceStation" runat="server"></asp:TextBox>
-            </td>
-        </tr>
+        </div>
 
-        <tr>
-            <td>Date :
-            </td>
-            <td>
-                <asp:TextBox ID="txtDate" runat="server"></asp:TextBox>
-            </td>
-        </tr>
+        <div class="form-group row">
+            <label for="lblChargeSheet" class="col-sm-2 col-form-label">Charge Sheet No:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtChargeSheetNo" placeholder="Charge Sheet No." disabled runat="server">
+            </div>
+        </div>
 
-        <tr>
-            <td>FIR No. :
-            </td>
-            <td>
-                <asp:TextBox ID="txtFIRNo" runat="server"></asp:TextBox>
-            </td>
-        </tr>
+        <div class="form-group row">
+            <label for="lblNameOfPoliceStation" class="col-sm-2 col-form-label">Police Station:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtNameofPoliceStation" placeholder="Name of Police Station" runat="server">
+            </div>
+        </div>
 
-        <tr>
-            <td>District :
-            </td>
-            <td>
-                <asp:TextBox ID="txtDistrict" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
-            </td>
-            <td>
+        <div class="form-group row">
+            <label for="lblDate" class="col-sm-2 col-form-label">Date:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtDate" placeholder="Date (YYYY/MM/DD HH24:MI:SS)" runat="server">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="lblFirNo" class="col-sm-2 col-form-label">FIR No:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtFIRNo" placeholder="FIR No." runat="server">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="lblDistrict" class="col-sm-2 col-form-label">District:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtDistrict" placeholder="District" runat="server">
+            </div>
+        </div>
+
+        <div class="form-group row" style="text-align: center">
+            <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
-            </td>
-        </tr>
+        </div>
 
-        <tr>
-            <td colspan ="2">
-                <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Green"></asp:Label>
-            </td>
-            
-        </tr>
+        <asp:Label ID="lblMessage" runat="server" Text="" ForeColor="Green"></asp:Label>
 
-    </table>
-
-    </td>
-</tr>
+    </div>
 
 </asp:Content>

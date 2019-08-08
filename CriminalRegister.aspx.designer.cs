@@ -13,15 +13,6 @@ namespace CriminalRecordManagement {
     public partial class CriminalRegister {
         
         /// <summary>
-        /// lblCriminalNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCriminalNo;
-        
-        /// <summary>
         /// txtCriminalNo control.
         /// </summary>
         /// <remarks>
@@ -29,15 +20,6 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCriminalNo;
-        
-        /// <summary>
-        /// crName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label crName;
         
         /// <summary>
         /// txtCriminalName control.
@@ -49,15 +31,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCriminalName;
         
         /// <summary>
-        /// lblNickName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNickName;
-        
-        /// <summary>
         /// txtcrNickName control.
         /// </summary>
         /// <remarks>
@@ -65,15 +38,6 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtcrNickName;
-        
-        /// <summary>
-        /// lblAge control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAge;
         
         /// <summary>
         /// txtAge control.
@@ -85,15 +49,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtAge;
         
         /// <summary>
-        /// lblOccupation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblOccupation;
-        
-        /// <summary>
         /// txtOccupation control.
         /// </summary>
         /// <remarks>
@@ -101,15 +56,6 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtOccupation;
-        
-        /// <summary>
-        /// lblCrimeType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCrimeType;
         
         /// <summary>
         /// txtCrimeType control.
@@ -121,15 +67,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCrimeType;
         
         /// <summary>
-        /// lblAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddress;
-        
-        /// <summary>
         /// txtAddress control.
         /// </summary>
         /// <remarks>
@@ -137,15 +74,6 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtAddress;
-        
-        /// <summary>
-        /// lblMostWanted control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMostWanted;
         
         /// <summary>
         /// rdmostWatedYes control.

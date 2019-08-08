@@ -62,5 +62,24 @@ namespace CriminalRecordManagement.DataLayer
 
             return true;
         }
+
+        public int getComplaintCount()
+        {
+            int ComplaintCount = 1;
+            //sqlComm2.ExecuteScalar()
+
+            DataConnection con = new DataConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "SELECT max( [ComplaintNo]) + 1 FROM [dbo].[tblComplaintRegister]";
+
+            object retuvalue = cmd.ExecuteScalar();
+            if (retuvalue != DBNull.Value)
+            {
+                ComplaintCount = Convert.ToInt32(retuvalue);
+            }
+            return ComplaintCount;
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrisonerNo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPrisonerNo;
         
         /// <summary>
         /// txtChargeSheetNo control.
@@ -28,7 +28,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtChargeSheetNo;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtChargeSheetNo;
         
         /// <summary>
         /// txtNickName control.
@@ -37,7 +37,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNickName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNickName;
         
         /// <summary>
         /// txtTypeofCrime control.
@@ -46,7 +46,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTypeofCrime;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTypeofCrime;
         
         /// <summary>
         /// txtFamilyMember control.
@@ -55,7 +55,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFamilyMember;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFamilyMember;
         
         /// <summary>
         /// txtIdentificationMark control.
@@ -64,7 +64,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIdentificationMark;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtIdentificationMark;
         
         /// <summary>
         /// txtHeight control.
@@ -73,7 +73,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHeight;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtHeight;
         
         /// <summary>
         /// txtWeight control.
@@ -82,7 +82,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtWeight;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtWeight;
         
         /// <summary>
         /// txtColor control.
@@ -91,7 +91,7 @@ namespace CriminalRecordManagement {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtColor;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtColor;
         
         /// <summary>
         /// btnSave control.

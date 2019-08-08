@@ -10,61 +10,34 @@
 namespace CriminalRecordManagement {
     
     
-    public partial class ChargeSheet {
+    public partial class Reports {
         
         /// <summary>
-        /// txtChargeSheetNo control.
+        /// ddlSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtChargeSheetNo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSearch;
         
         /// <summary>
-        /// txtNameofPoliceStation control.
+        /// txtSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNameofPoliceStation;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSearch;
         
         /// <summary>
-        /// txtDate control.
+        /// btnSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDate;
-        
-        /// <summary>
-        /// txtFIRNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFIRNo;
-        
-        /// <summary>
-        /// txtDistrict control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDistrict;
-        
-        /// <summary>
-        /// btnSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.Button btnSearch;
         
         /// <summary>
         /// btnCancel control.
@@ -76,12 +49,12 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// lblMessage control.
+        /// grdReport control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.GridView grdReport;
     }
 }

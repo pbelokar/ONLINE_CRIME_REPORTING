@@ -1,6 +1,7 @@
 ﻿using CriminalRecordManagement.DataLayer;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,10 +11,13 @@ namespace CriminalRecordManagement
 {
     public partial class FIRRegister : System.Web.UI.Page
     {
+        private object dc;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                displayFirCount();
                 checkUser();
             }
         }
@@ -33,22 +37,23 @@ namespace CriminalRecordManagement
         {
             clsFIRRegister fir = new clsFIRRegister();
 
-            fir.FIRComplaintNo = Convert.ToInt32(txtComplaintNo.Text);
-            fir.FIRDate = Convert.ToDateTime(txtDate.Text);
-            fir.FIRTypeofInformation = txtTypeofInformation.Text;
-            fir.FIRPlaceofOccurance = txtPlaceofOccurance.Text;
-            fir.FIRForeignLocal = txtForeignLocal.Text;
-            fir.FIRAct = txtAct.Text;
-            fir.FIRDistrict = txtDistrict.Text;
-            fir.FIRInformationAddress = txtInformantAddress.Text;
-            fir.FIRPassportNo = txtPassportNo.Text;
-            fir.FIRPoliceOfficer = txtPoliceOfficer.Text;
-            fir.FIRReceivedTime = Convert.ToDateTime(txtReceivedTime.Text);
-            fir.FIRInformationReceived = txtInformationReceived.Text;
+            fir.FIRComplaintNo = Convert.ToInt32(txtComplaintNo.Value);
+            fir.FIRDate = Convert.ToDateTime(txtDate.Value);
+            fir.FIRTypeofInformation = txtTypeofInformation.Value;
+            fir.FIRPlaceofOccurance = txtPlaceofOccurance.Value;
+            fir.FIRForeignLocal = txtForeignLocal.Value;
+            fir.FIRAct = txtAct.Value;
+            fir.FIRDistrict = txtDistrict.Value;
+            fir.FIRInformationAddress = txtInformantAddress.Value;
+            fir.FIRPassportNo = txtPassportNo.Value;
+            fir.FIRPoliceOfficer = txtPoliceOfficer.Value;
+            fir.FIRReceivedTime = Convert.ToDateTime(txtReceivedTime.Value);
+            fir.FIRInformationReceived = txtInformationReceived.Value;
 
             try
             {
                 fir.AddFIR();
+                displayFirCount();
             }
             catch (Exception ex)
             {
@@ -67,19 +72,25 @@ namespace CriminalRecordManagement
 
         public void ClearAll()
         {
-            txtComplaintNo.Text = "";
-            txtDate.Text = "";
-            txtTypeofInformation.Text = "";
-            txtPlaceofOccurance.Text = "";
-            txtForeignLocal.Text = "";
-            txtAct.Text = "";
-            txtDistrict.Text = "";
-            txtInformantAddress.Text = "";
-            txtPassportNo.Text = "";
-            txtPoliceOfficer.Text = "";
-            txtReceivedTime.Text = "";
-            txtInformationReceived.Text = "";
+            txtComplaintNo.Value = "";
+            txtDate.Value = "";
+            txtTypeofInformation.Value = "";
+            txtPlaceofOccurance.Value = "";
+            txtForeignLocal.Value = "";
+            txtAct.Value = "";
+            txtDistrict.Value = "";
+            txtInformantAddress.Value = "";
+            txtPassportNo.Value = "";
+            txtPoliceOfficer.Value = "";
+            txtReceivedTime.Value = "";
+            txtInformationReceived.Value = "";
 
+        }
+
+        public void displayFirCount()
+        {
+            clsFIRRegister count = new clsFIRRegister();
+            txtFirNo.Value = count.getFirCount().ToString();
         }
     }
 }

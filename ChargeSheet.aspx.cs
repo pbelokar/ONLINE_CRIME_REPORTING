@@ -14,6 +14,7 @@ namespace CriminalRecordManagement
         {
             if (!IsPostBack)
             {
+                displayChargeSheetCount();
                 checkUser();
             }
         }
@@ -32,14 +33,15 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsChargeSheet chargeSheet = new clsChargeSheet();
-            chargeSheet.CsNameofPoliceStation = txtNameofPoliceStation.Text;
-            chargeSheet.CsDate = Convert.ToDateTime(txtDate.Text);
-            chargeSheet.CsFIRNo = Convert.ToInt32(txtFIRNo.Text);
-            chargeSheet.CsDistrict = txtDistrict.Text;
+            chargeSheet.CsNameofPoliceStation = txtNameofPoliceStation.Value;
+            chargeSheet.CsDate = Convert.ToDateTime(txtDate.Value);
+            chargeSheet.CsFIRNo = Convert.ToInt32(txtFIRNo.Value);
+            chargeSheet.CsDistrict = txtDistrict.Value;
 
             try
             {
                 chargeSheet.AddChargeSheet();
+                displayChargeSheetCount();
             }
             catch (Exception ex)
             {
@@ -53,15 +55,21 @@ namespace CriminalRecordManagement
 
         public void ClearAllTextBox()
         {
-            txtDate.Text = "";
-            txtDistrict.Text = "";
-            txtNameofPoliceStation.Text = "";
-            txtFIRNo.Text = "";
+            txtDate.Value = "";
+            txtDistrict.Value = "";
+            txtNameofPoliceStation.Value = "";
+            txtFIRNo.Value = "";
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             ClearAllTextBox();
+        }
+
+        public void displayChargeSheetCount()
+        {
+            clsChargeSheet count = new clsChargeSheet();
+            txtChargeSheetNo.Value = count.getChargeSheetCount().ToString();
         }
     }
 }

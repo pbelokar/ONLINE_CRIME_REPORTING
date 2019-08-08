@@ -11,130 +11,97 @@
         }
     </style>
 
-    <tr>
-        <td>
-            <div class="form-group" style="background-color: white; width:700px; padding:10px;">
+    <%--  <tr>
+        <td>--%>
+    <%--<div class="form-group" style="background-color: white; width: 700px; padding: 10px;">
 
-               <div class="form-group row">
+                <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Criminal No.:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputPassword" placeholder="Criminal No.">
                     </div>
                 </div>
 
+            </div>--%>
+
+
+    <%--   <table>--%>
+    <div class="form-group" style="background-color: white; width: 500px; padding: 10px;">
+
+        <div class="form-group row col-sm-10" style="text-align: center; width: 152%">
+            <label for="title" class="col-sm-2 col-form-label">Criminal Registration</label>
+
+        </div>
+
+        <div class="form-group row">
+            <label for="lblCriminalNo" class="col-sm-2 col-form-label">Criminal No.:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtCriminalNo" placeholder="Criminal No." disabled runat="server">
             </div>
+        </div>
 
+        <div class="form-group row">
+            <label for="lblName" class="col-sm-2 col-form-label">Criminal Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtCriminalName" placeholder="Criminal Name" runat="server">
+            </div>
+        </div>
 
-            <table>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblCriminalNo" runat="server" Text="Criminal No.:"></asp:Label>
+        <div class="form-group row">
+            <label for="lblNickName" class="col-sm-2 col-form-label">Nick Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtcrNickName" placeholder="Nick Name" runat="server">
+            </div>
+        </div>
 
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtCriminalNo1" runat="server" ></asp:TextBox>--%>
+        <div class="form-group row">
+            <label for="lblAge" class="col-sm-2 col-form-label">Age :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtAge" placeholder="Age" runat="server">
+            </div>
+        </div>
 
-                        <input type="text" class="form-control" id="txtCriminalNo" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="crName" runat="server" Text="Criminal Name :"></asp:Label>
+        <div class="form-group row">
+            <label for="lblOccupation" class="col-sm-2 col-form-label">Occupation :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtOccupation" placeholder="Occupation" runat="server">
+            </div>
+        </div>
 
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtCriminalName" runat="server"></asp:TextBox>--%>
-                        <input type="text" class="form-control" id="txtCriminalName" placeholder="Criminal Name" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblNickName" runat="server" Text="Nick Name :"></asp:Label>
+        <div class="form-group row">
+            <label for="lblCrimeType" class="col-sm-2 col-form-label">CrimeType :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtCrimeType" placeholder="CrimeType" runat="server">
+            </div>
+        </div>
 
-
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtcrNickName" runat="server"></asp:TextBox>--%>
-                        <input type="text" class="form-control" id="txtcrNickName" placeholder="Nick Name" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblAge" runat="server" Text="Age :"></asp:Label>
-
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtAge" runat="server"></asp:TextBox>--%>
-                        <input type="text" class="form-control" id="txtAge" placeholder="Age" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblOccupation" runat="server" Text="Occupation :"></asp:Label>
-
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtOccupation" runat="server"></asp:TextBox>--%>
-                        <input type="text" class="form-control" id="txtOccupation" placeholder="Occupation" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblCrimeType" runat="server" Text="Crime Type :"></asp:Label>
-
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtCrimeType" runat="server"></asp:TextBox>--%>
-                        <input type="text" class="form-control" id="txtCrimeType" placeholder="Crime Type" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblAddress" runat="server" Text="Address :"></asp:Label>
-
-                    </td>
-                    <td>
-                        <%--<asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>--%>
-                        <input type="text" class="form-control" id="txtAddress" placeholder="Address" runat="server">
-                    </td>
-                </tr>
-                <tr style="background-color: white;">
-                    <td>
-                        <asp:Label ID="lblMostWanted" runat="server" Text="MostWanted :"></asp:Label>
-
-                    </td>
-                    <td>
-
-                        <%--<asp:RadioButtonList ID="rdmostWated" runat="server" RepeatDirection ="Horizontal"></asp:RadioButtonList>--%>
-                        <input class="form-check-input" type="radio" id="rdmostWatedYes" name="rdmostWated" runat="server" value="Yes" />&nbsp;Yes
+        <div class="form-group row">
+            <label for="lblAddress" class="col-sm-2 col-form-label">Address :</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="txtAddress" placeholder="Address" runat="server">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lblMostWanted" class="col-sm-2 col-form-label">Most Wanted : &nbsp;</label>
+            <%--<asp:Label ID="lblMostWanted" runat="server" Text="MostWanted :"></asp:Label>--%>
+            <div class="col-sm-10">
+                <%--<asp:RadioButtonList ID="rdmostWated" runat="server" RepeatDirection ="Horizontal"></asp:RadioButtonList>--%>
+                <input class="form-check-input" type="radio" id="rdmostWatedYes" name="rdmostWated" runat="server" value="Yes" />&nbsp;Yes
                         <input class="form-check-input" type="radio" id="rdmostWatedNo" name="rdmostWated" runat="server" value="No" />&nbsp;No
-                    </td>
-                </tr>
+            </div>
+        </div>
 
-                <tr>
-                    <td>
-                        <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
-
-                    </td>
-                    <td>
+        <div class="form-group row" style="text-align: center">
+            <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />&nbsp;&nbsp;&nbsp;&nbsp;
 
                         <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
-                    </td>
-                </tr>
+        </div>
 
-                <tr>
-                    <td colspan="2">
+        <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
+    </div>
+    <%--</table>--%>
 
-                        <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
-
-                    </td>
-
-                </tr>
-
-            </table>
-
-        </td>
-    </tr>
-
+    <%--  </td>
+    </tr>--%>
 </asp:Content>
 

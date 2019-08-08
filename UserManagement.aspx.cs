@@ -30,6 +30,13 @@ namespace CriminalRecordManagement
             grdUser.DataSource = dsUsers;
             grdUser.DataBind();
 
+            ddlUserNames.DataSource = dsUsers;
+            ddlUserNames.DataTextField = "UserName";
+            ddlUserNames.DataValueField = "UserId";
+            ddlUserNames.DataBind();
+                
+
+
         }
 
         public bool checkUser()
@@ -41,6 +48,24 @@ namespace CriminalRecordManagement
 
             return true;
 
+        }
+
+        protected void btnapprove_Click(object sender, EventArgs e)
+        {
+            clsUserManagement updateuser = new clsUserManagement();
+            updateuser.UserId =Convert.ToInt32(ddlUserNames.SelectedValue.ToString());
+
+            updateuser.UpdateUser(1);
+            BindData();
+        }
+
+        protected void btnreject_Click(object sender, EventArgs e)
+        {
+            clsUserManagement updateuser = new clsUserManagement();
+            updateuser.UserId = Convert.ToInt32(ddlUserNames.SelectedValue.ToString());
+
+            updateuser.UpdateUser(0);
+            BindData();
         }
     }
 }

@@ -75,5 +75,24 @@ namespace CriminalRecordManagement.DataLayer
             return true;
         }
 
+        public int getCriminalCount()
+        {
+            int criminalCount = 1;
+            //sqlComm2.ExecuteScalar()
+
+            DataConnection con = new DataConnection();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = dc.getConnection();
+            cmd.CommandText = "SELECT max( [CriminalID]) + 1 FROM [dbo].[tblCriminalRegister]";
+
+            object retuvalue = cmd.ExecuteScalar();
+            if (retuvalue != DBNull.Value)
+            {
+                criminalCount = Convert.ToInt32(retuvalue);
+            }
+            return criminalCount;
+        }
+
     }
 }

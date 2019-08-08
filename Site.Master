@@ -4,7 +4,7 @@
 
 <html lang="en">
 <head runat="server">
-     <meta charset="utf-8" />
+    <meta charset="utf-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - My ASP.NET Application</title>
@@ -58,32 +58,52 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" runat="server" href="#">Criminal Record Management</a>
+                            <a class="navbar-brand" runat="server" href="~/default">Home</a>
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <%-- <li><a runat="server" href="~/">Home</a></li>--%>
+                                
+                                <%
+                                   // if (string.IsNullOrEmpty(Convert.ToString(Session["userid"])))
+
+                                    
+                                        if (Convert.ToString(Session["userid"]).ToLower() == "admin")
+
+                                        {
+
+                                %>
+                                <li><a runat="server" href="~/UserManagement">Users</a></li>
                                 <li><a runat="server" href="~/CriminalRegister">Criminal Register</a></li>
                                 <li><a runat="server" href="~/PrisonerRegister">Prisoner Register</a></li>
                                 <li><a runat="server" href="~/MostWanted">Most Wanted</a></li>
                                 <li><a runat="server" href="~/PostMortem">Post Mortem</a></li>
                                 <li><a runat="server" href="~/FIRRegister">FIR Register</a></li>
                                 <li><a runat="server" href="~/ChargeSheet">Charge Sheet</a></li>
+
+                                <%
+
+                                        }
+
+                                %>
+
+
                                 <li><a runat="server" href="~/ComplaintRegister">Complaint Register</a></li>
-                                <%--<li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>--%>
+                                <li><a runat="server" href="~/Reports">Reports</a></li>
+                                <li><a runat="server" href="~/Login">
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/powerbutton.png" Height="20px"/></a></li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
 
 
-                <table style="width: 100%;">
-                    <br />
-                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                    </asp:ContentPlaceHolder>
+                <%--  <table style="width: 100%;">--%>
+                <br />
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
 
-                </table>
+                <%--</table>--%>
             </div>
         </div>
 
