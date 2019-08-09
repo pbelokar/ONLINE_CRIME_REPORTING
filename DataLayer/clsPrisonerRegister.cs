@@ -10,7 +10,7 @@ namespace CriminalRecordManagement.DataLayer
     public class clsPrisonerRegister
     {
 
-        private int _PrisonerID;
+        //private int _PrisonerID;
         private int _ChargeSheetNo;
         private String _NickName;
         private String _TypeofCrime;
@@ -22,7 +22,7 @@ namespace CriminalRecordManagement.DataLayer
 
         DataConnection dc = new DataConnection();
 
-        public int PrisonerID { get => _PrisonerID; }
+        //public int PrisonerID { get => _PrisonerID; }
         public int ChargeSheetNo { get => _ChargeSheetNo; set => _ChargeSheetNo = value; }
         public string NickName { get => _NickName; set => _NickName = value; }
         public string TypeofCrime { get => _TypeofCrime; set => _TypeofCrime = value; }
@@ -40,17 +40,17 @@ namespace CriminalRecordManagement.DataLayer
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter prPrisonerID = cmd.Parameters.Add("@PrisonerID", SqlDbType.Int);
-            SqlParameter prChargeSheetNo = cmd.Parameters.Add("@ChargeSheetNo", SqlDbType.Int);
-            SqlParameter prNickName = cmd.Parameters.Add("@NickName", SqlDbType.VarChar, 100);
-            SqlParameter prTypeofCrime = cmd.Parameters.Add("@TypeofCrime", SqlDbType.VarChar, 100);
-            SqlParameter prFamilyMembers = cmd.Parameters.Add("@FamilyMembers", SqlDbType.VarChar, 100);
-            SqlParameter prIdentificationMark = cmd.Parameters.Add("@IdentificationMark", SqlDbType.VarChar, 50);
-            SqlParameter prHeight = cmd.Parameters.Add("@Height", SqlDbType.VarChar, 50);
-            SqlParameter prWeight = cmd.Parameters.Add("@Weight", SqlDbType.Int);
-            SqlParameter prColor = cmd.Parameters.Add("@Color", SqlDbType.VarChar, 50);
+            //SqlParameter prPrisonerID = cmd.Parameters.Add("@PrisonerID", SqlDbType.Int);
+            SqlParameter prChargeSheetNo = cmd.Parameters.Add("@PrChargeSheetNo", SqlDbType.Int);
+            SqlParameter prNickName = cmd.Parameters.Add("@PrNickName", SqlDbType.VarChar, 100);
+            SqlParameter prTypeofCrime = cmd.Parameters.Add("@PrTypeofCrime", SqlDbType.VarChar, 100);
+            SqlParameter prFamilyMembers = cmd.Parameters.Add("@PrFamilyMembers", SqlDbType.VarChar, 100);
+            SqlParameter prIdentificationMark = cmd.Parameters.Add("@PrIdentificationMark", SqlDbType.VarChar, 50);
+            SqlParameter prHeight = cmd.Parameters.Add("@PrHeight", SqlDbType.VarChar, 50);
+            SqlParameter prWeight = cmd.Parameters.Add("@prWeight", SqlDbType.Int);
+            SqlParameter prColor = cmd.Parameters.Add("@PrColor", SqlDbType.VarChar, 50);
 
-            prPrisonerID.Value = this.PrisonerID;
+            //prPrisonerID.Value = this.PrisonerID;
             prChargeSheetNo.Value = this.ChargeSheetNo;
             prNickName.Value = this.NickName;
             prTypeofCrime.Value = this.TypeofCrime;

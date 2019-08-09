@@ -62,14 +62,14 @@
                         </div>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                
+
                                 <%
-                                   // if (string.IsNullOrEmpty(Convert.ToString(Session["userid"])))
+                                    // if (string.IsNullOrEmpty(Convert.ToString(Session["userid"])))
 
-                                    
-                                        if (Convert.ToString(Session["userid"]).ToLower() == "admin")
 
-                                        {
+                                    if (Convert.ToString(Session["userid"]).ToLower() == "admin")
+
+                                    {
 
                                 %>
                                 <li><a runat="server" href="~/UserManagement">Users</a></li>
@@ -77,20 +77,20 @@
                                 <li><a runat="server" href="~/PrisonerRegister">Prisoner Register</a></li>
                                 <li><a runat="server" href="~/MostWanted">Most Wanted</a></li>
                                 <li><a runat="server" href="~/PostMortem">Post Mortem</a></li>
-                                <li><a runat="server" href="~/FIRRegister">FIR Register</a></li>
+                                <%--<li><a runat="server" href="~/FIRRegister">FIR Register</a></li>--%>
                                 <li><a runat="server" href="~/ChargeSheet">Charge Sheet</a></li>
 
                                 <%
 
-                                        }
+                                    }
 
                                 %>
 
-
+                                <li><a runat="server" href="~/FIRRegister">FIR Register</a></li>
                                 <li><a runat="server" href="~/ComplaintRegister">Complaint Register</a></li>
                                 <li><a runat="server" href="~/Reports">Reports</a></li>
                                 <li><a runat="server" href="~/Login">
-                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/powerbutton.png" Height="20px"/></a></li>
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/LogoutButton.jpg" Height="20px" /></a></li>
 
                             </ul>
                         </div>

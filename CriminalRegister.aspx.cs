@@ -79,7 +79,6 @@ namespace CriminalRecordManagement
             txtOccupation.Value = "";
             txtCrimeType.Value = "";
             txtAddress.Value = "";
-
         }
 
         public void displayCriminalCount()

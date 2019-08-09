@@ -34,12 +34,14 @@ namespace CriminalRecordManagement.DataLayer
 
             SqlParameter prID = cmd.Parameters.Add("@mwID", SqlDbType.Int);
             SqlParameter prName = cmd.Parameters.Add("@mwName", SqlDbType.VarChar, 100);
+            SqlParameter prNickName = cmd.Parameters.Add("@mwNickName", SqlDbType.VarChar, 100);
             SqlParameter prAge = cmd.Parameters.Add("@mwAge", SqlDbType.Int);
             SqlParameter prSex = cmd.Parameters.Add("@mwSex", SqlDbType.VarChar, 100);
             SqlParameter prDescription = cmd.Parameters.Add("@mwDescription", SqlDbType.VarChar, 100);
 
             prID.Value = this.ID;
             prName.Value = this.Name;
+            prNickName.Value = this.NickName;
             prAge.Value = this.Age;
             prSex.Value = this.Sex;
             prDescription.Value = this.Description;

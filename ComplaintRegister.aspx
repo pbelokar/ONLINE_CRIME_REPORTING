@@ -14,7 +14,7 @@
     <div class="form-group" style="background-color: white; width: 500px; padding: 10px;">
 
         <div class="form-group row col-sm-10" style="text-align: center; width: 152%">
-            <label for="title" class="col-sm-2 col-form-label">Criminal Registration</label>
+            <label for="title" class="col-sm-2 col-form-label">Complaint Registration</label>
         </div>
 
         <div class="form-group row">
