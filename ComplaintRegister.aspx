@@ -27,14 +27,14 @@
         <div class="form-group row">
             <label for="lblName" class="col-sm-2 col-form-label">Name:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtName" placeholder="Name" runat="server">
+                <input type="text" class="form-control" id="txtName" placeholder="Name of the suspect" runat="server">
             </div>
         </div>
 
         <div class="form-group row">
             <label for="lblOccupation" class="col-sm-2 col-form-label">Occupation:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtOccupation" placeholder="Occupation" runat="server">
+                <input type="text" class="form-control" id="txtOccupation" placeholder="Occupation of the suspect" runat="server">
             </div>
         </div>
 
@@ -60,16 +60,9 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblSex" class="col-sm-2 col-form-label">Guardian Name:</label>
+            <label for="lblComplaintDate" class="col-sm-2 col-form-label">Date of complaint:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtFatherHusbandName" placeholder="Father's / Husband's Name" runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="lblComplaintDate" class="col-sm-2 col-form-label">Complaint Date:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtComplaintDate" placeholder="Complaint Date (YYYY/MM/DD HH24:MI:SS)" runat="server">
+                <input type="text" class="form-control" id="txtComplaintDate" placeholder="Date of complaint (YYYY/MM/DD)" runat="server">
             </div>
         </div>
 

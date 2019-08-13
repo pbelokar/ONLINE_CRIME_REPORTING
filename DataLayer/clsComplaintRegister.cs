@@ -9,26 +9,24 @@ namespace CriminalRecordManagement.DataLayer
 {
     public class clsComplaintRegister
     {
-        private int complaintNo;  
-        private string cmpName;
-        private string cmpOccupation;
-        private string cmpDetailsofSuspect;
-        private int cmpAge;
-        private string cmpSex;
-        private string cmpFatherHusbandName;
-        private DateTime cmpDate;
-        private string cmdNationality;
+        private int _CORENo;  
+        private string _COREName;
+        private string _COREOccupation;
+        private string _CORESuspectDetails;
+        private int _COREAge;
+        private string _CORESex;
+        private DateTime _COREDateOfRegistration;
+        private string _CORENationality;
         DataConnection dc = new DataConnection();
 
-        public string CmpName { get => cmpName; set => cmpName = value; }
-        public string CmpOccupation { get => cmpOccupation; set => cmpOccupation = value; }
-        public string CmpDetailsofSuspect { get => cmpDetailsofSuspect; set => cmpDetailsofSuspect = value; }
-        public int CmpAge { get => cmpAge; set => cmpAge = value; }
-        public string CmpSex { get => cmpSex; set => cmpSex = value; }
-        public string CmpFatherHusbandName { get => cmpFatherHusbandName; set => cmpFatherHusbandName = value; }
-        public DateTime CmpDate { get => cmpDate; set => cmpDate = value; }
-        public string CmdNationality { get => cmdNationality; set => cmdNationality = value; }
-        public int ComplaintNo { get => complaintNo; }
+        public int CORENo { get => _CORENo;}
+        public string COREName { get => _COREName; set => _COREName = value; }
+        public string COREOccupation { get => _COREOccupation; set => _COREOccupation = value; }
+        public string CORESuspectDetails { get => _CORESuspectDetails; set => _CORESuspectDetails = value; }
+        public int COREAge { get => _COREAge; set => _COREAge = value; }
+        public string CORESex { get => _CORESex; set => _CORESex = value; }
+        public DateTime COREDateOfRegistration { get => _COREDateOfRegistration; set => _COREDateOfRegistration = value; }
+        public string CORENationality { get => _CORENationality; set => _CORENationality = value; }
 
         public Boolean AddComplaint()
         {
@@ -37,23 +35,21 @@ namespace CriminalRecordManagement.DataLayer
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter prcmpName = cmd.Parameters.Add("@cmpName", SqlDbType.VarChar, 100);
-            SqlParameter prcmpOccupation = cmd.Parameters.Add("@cmpOccupation", SqlDbType.VarChar, 100);
-            SqlParameter prcmpDetailsofSuspect = cmd.Parameters.Add("@cmpDetailsofSuspect", SqlDbType.VarChar, 100);
-            SqlParameter prcmpAge = cmd.Parameters.Add("@cmpAge", SqlDbType.Int);
-            SqlParameter prcmpSex = cmd.Parameters.Add("@cmpSex", SqlDbType.VarChar, 100);
-            SqlParameter prcmpFatherHusbandName = cmd.Parameters.Add("@cmpFatherHusbandName", SqlDbType.VarChar, 100);
-            SqlParameter prcmpDate = cmd.Parameters.Add("@cmpDate", SqlDbType.DateTime);
-            SqlParameter prcmdNationality = cmd.Parameters.Add("@cmdNationality", SqlDbType.VarChar, 100);
+            SqlParameter prcmpName = cmd.Parameters.Add("@COREName", SqlDbType.VarChar, 100);
+            SqlParameter prcmpOccupation = cmd.Parameters.Add("@COREOccupation", SqlDbType.VarChar, 100);
+            SqlParameter prcmpDetailsofSuspect = cmd.Parameters.Add("@CORESuspectDetails", SqlDbType.VarChar, 100);
+            SqlParameter prcmpAge = cmd.Parameters.Add("@COREAge", SqlDbType.Int);
+            SqlParameter prcmpSex = cmd.Parameters.Add("@CORESex", SqlDbType.VarChar, 100);
+            SqlParameter prcmpDate = cmd.Parameters.Add("@COREDateOfRegistration", SqlDbType.DateTime);
+            SqlParameter prcmdNationality = cmd.Parameters.Add("@CORENationality", SqlDbType.VarChar, 100);
 
-            prcmpName.Value = this.cmpName;
-            prcmpOccupation.Value = this.CmpOccupation;
-            prcmpDetailsofSuspect.Value = this.cmpDetailsofSuspect;
-            prcmpAge.Value = this.cmpAge;
-            prcmpSex.Value = this.cmpSex;
-            prcmpFatherHusbandName.Value = this.cmpFatherHusbandName;
-            prcmpDate.Value = this.cmpDate;
-            prcmdNationality.Value = this.cmdNationality;
+            prcmpName.Value = this.COREName;
+            prcmpOccupation.Value = this.COREOccupation;
+            prcmpDetailsofSuspect.Value = this.CORESuspectDetails;
+            prcmpAge.Value = this.COREAge;
+            prcmpSex.Value = this.CORESex;
+            prcmpDate.Value = this.COREDateOfRegistration;
+            prcmdNationality.Value = this.CORENationality;
 
             if (con.State != ConnectionState.Open)
                 con.Open();
@@ -72,7 +68,7 @@ namespace CriminalRecordManagement.DataLayer
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = dc.getConnection();
-            cmd.CommandText = "SELECT max( [ComplaintNo]) + 1 FROM [dbo].[tblComplaintRegister]";
+            cmd.CommandText = "SELECT max( [CORENo]) + 1 FROM [dbo].[tblComplaintRegistration]";
 
             object retuvalue = cmd.ExecuteScalar();
             if (retuvalue != DBNull.Value)

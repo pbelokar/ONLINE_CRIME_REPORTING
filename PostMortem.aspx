@@ -55,13 +55,6 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblHouseName" class="col-sm-2 col-form-label">House Name:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtHouseName" placeholder="House Name" runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
             <label for="lblDoctorsName" class="col-sm-2 col-form-label">Doctor's Name:</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="txtDrName" placeholder="Doctor's Name" runat="server">
@@ -76,7 +69,7 @@
         </div>
 <div class="form-group row" style="text-align: center">
                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"/>
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel"/>
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click"/>
 </div>
         <asp:Label ID="lblMessage" runat="server" ForeColor="Green"></asp:Label>
 </asp:Content>

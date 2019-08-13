@@ -34,14 +34,13 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsComplaintRegister complaintRegister = new clsComplaintRegister();
-            complaintRegister.CmpName = txtName.Value;
-            complaintRegister.CmpOccupation = txtOccupation.Value;
-            complaintRegister.CmpDetailsofSuspect = txtDetailsofSuspect.Value;
-            complaintRegister.CmpAge = Convert.ToInt32(txtAge.Value);
-            complaintRegister.CmpSex = txtSex.Value;
-            complaintRegister.CmpFatherHusbandName = txtFatherHusbandName.Value;
-            complaintRegister.CmpDate = Convert.ToDateTime(txtComplaintDate.Value);
-            complaintRegister.CmdNationality = txtNationality.Value;
+            complaintRegister.COREName = txtName.Value;
+            complaintRegister.COREOccupation = txtOccupation.Value;
+            complaintRegister.CORESuspectDetails = txtDetailsofSuspect.Value;
+            complaintRegister.COREAge = Convert.ToInt32(txtAge.Value);
+            complaintRegister.CORESex = txtSex.Value;
+            complaintRegister.COREDateOfRegistration = Convert.ToDateTime(txtComplaintDate.Value);
+            complaintRegister.CORENationality = txtNationality.Value;
 
             try
             {
@@ -72,7 +71,6 @@ namespace CriminalRecordManagement
             txtDetailsofSuspect.Value = "";
             txtAge.Value = "";
             txtSex.Value = "";
-            txtFatherHusbandName.Value = "";
             txtComplaintDate.Value = "";
             txtNationality.Value = "";
         }

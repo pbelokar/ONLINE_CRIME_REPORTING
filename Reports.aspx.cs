@@ -35,7 +35,10 @@ namespace CriminalRecordManagement
             DataSet dsReport = report.RetriveData();
 
             BindGrid(dsReport);
-            
+
+            ClearAll();
+
+
         }
         private void FillDDL()
         {
@@ -61,6 +64,12 @@ namespace CriminalRecordManagement
             }
 
             return true;
+
+        }
+
+        public void ClearAll()
+        {
+            txtSearch.Value = "";
 
         }
     }

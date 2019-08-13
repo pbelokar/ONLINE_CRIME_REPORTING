@@ -37,18 +37,16 @@ namespace CriminalRecordManagement
         {
             clsFIRRegister fir = new clsFIRRegister();
 
-            fir.FIRComplaintNo = Convert.ToInt32(txtComplaintNo.Value);
-            fir.FIRDate = Convert.ToDateTime(txtDate.Value);
-            fir.FIRTypeofInformation = txtTypeofInformation.Value;
-            fir.FIRPlaceofOccurance = txtPlaceofOccurance.Value;
-            fir.FIRForeignLocal = txtForeignLocal.Value;
-            fir.FIRAct = txtAct.Value;
-            fir.FIRDistrict = txtDistrict.Value;
-            fir.FIRInformationAddress = txtInformantAddress.Value;
-            fir.FIRPassportNo = txtPassportNo.Value;
-            fir.FIRPoliceOfficer = txtPoliceOfficer.Value;
-            fir.FIRReceivedTime = Convert.ToDateTime(txtReceivedTime.Value);
-            fir.FIRInformationReceived = txtInformationReceived.Value;
+            fir.FIRECORENo = Convert.ToInt32(txtComplaintNo.Value);
+            fir.FIREDateOfFIR = Convert.ToDateTime(txtDate.Value);
+            fir.FIREInformationType = txtTypeofInformation.Value;
+            fir.FIREPlace = txtPlaceofOccurance.Value;
+            fir.FIRENationality = txtForeignLocal.Value;
+            fir.FIREActionDone = txtAct.Value;
+            fir.FIREInformantAddress = txtInformantAddress.Value;
+            fir.FIREOnDutyOfficer = txtPoliceOfficer.Value;
+            fir.FIRETimeReceived = Convert.ToDateTime(txtReceivedTime.Value);
+            fir.FIREReceivedInformation = txtInformationReceived.Value;
 
             try
             {
@@ -78,9 +76,7 @@ namespace CriminalRecordManagement
             txtPlaceofOccurance.Value = "";
             txtForeignLocal.Value = "";
             txtAct.Value = "";
-            txtDistrict.Value = "";
             txtInformantAddress.Value = "";
-            txtPassportNo.Value = "";
             txtPoliceOfficer.Value = "";
             txtReceivedTime.Value = "";
             txtInformationReceived.Value = "";

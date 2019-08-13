@@ -37,12 +37,11 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsMostWanted mostWanted = new clsMostWanted();
-            mostWanted.ID = Convert.ToInt32(txtID.Value);
-            mostWanted.Name = txtName.Value;
-            mostWanted.NickName = txtNickName.Value;
-            mostWanted.Age = Convert.ToInt32(txtAge.Value);
-            mostWanted.Sex = txtSex.Value;
-            mostWanted.Description = txtDescription.Value;
+            mostWanted.MOWAID = Convert.ToInt32(txtID.Value);
+            mostWanted.MOWAName = txtName.Value;
+            mostWanted.MOWAAge = Convert.ToInt32(txtAge.Value);
+            mostWanted.MOWASex = txtSex.Value;
+            mostWanted.MOWADetails = txtDescription.Value;
 
             try
             {
@@ -68,7 +67,6 @@ namespace CriminalRecordManagement
         {
             txtID.Value = "";
             txtName.Value = "";
-            txtNickName.Value = "";
             txtAge.Value = "";
             txtSex.Value = "";
             txtDescription.Value = "";

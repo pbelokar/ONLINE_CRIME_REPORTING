@@ -33,10 +33,10 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsChargeSheet chargeSheet = new clsChargeSheet();
-            chargeSheet.CsNameofPoliceStation = txtNameofPoliceStation.Value;
-            chargeSheet.CsDate = Convert.ToDateTime(txtDate.Value);
-            chargeSheet.CsFIRNo = Convert.ToInt32(txtFIRNo.Value);
-            chargeSheet.CsDistrict = txtDistrict.Value;
+            chargeSheet.CHSHPoliceStation = txtPoliceStation.Value;
+            chargeSheet.CHSHDateOfRegister = Convert.ToDateTime(txtDateOfRegister.Value);
+            chargeSheet.CHSHFIRNo = Convert.ToInt32(txtFIRNo.Value);
+            chargeSheet.CHSHPlace = txtPlace.Value;
 
             try
             {
@@ -55,9 +55,9 @@ namespace CriminalRecordManagement
 
         public void ClearAllTextBox()
         {
-            txtDate.Value = "";
-            txtDistrict.Value = "";
-            txtNameofPoliceStation.Value = "";
+            txtDateOfRegister.Value = "";
+            txtPlace.Value = "";
+            txtPoliceStation.Value = "";
             txtFIRNo.Value = "";
         }
 

@@ -30,21 +30,14 @@
         <div class="form-group row">
             <label for="lblDate" class="col-sm-2 col-form-label">Date:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtDate" placeholder="Date (YYYY/MM/DD)" runat="server">
+                <input type="text" class="form-control" id="txtDate" placeholder="Date of FIR (YYYY/MM/DD hh24:mi:ss)" runat="server">
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="lblTime" class="col-sm-2 col-form-label">Time:</label>
+            <label for="lblTypeOfInformation" class="col-sm-2 col-form-label">Information:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtTime" placeholder="Time (HH24:MI:SS)" runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="lblTypeOfInformation" class="col-sm-2 col-form-label">Type of Information:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtTypeofInformation" placeholder="Type of Information" runat="server">
+                <input type="text" class="form-control" id="txtTypeofInformation" placeholder="Information type" runat="server">
             </div>
         </div>
 
@@ -56,23 +49,16 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblForeignLocal" class="col-sm-2 col-form-label">Foreign/Local:</label>
+            <label for="lblForeignLocal" class="col-sm-2 col-form-label">Nationality:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtForeignLocal" placeholder="Foreign/Local" runat="server">
+                <input type="text" class="form-control" id="txtForeignLocal" placeholder="Nationality" runat="server">
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="lblAct" class="col-sm-2 col-form-label">Act:</label>
+            <label for="lblAct" class="col-sm-2 col-form-label">Action done:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtAct" placeholder="Activity done" runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="lblDistrict" class="col-sm-2 col-form-label">District:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtDistrict" placeholder="District" runat="server">
+                <input type="text" class="form-control" id="txtAct" placeholder="Action done" runat="server">
             </div>
         </div>
 
@@ -84,16 +70,9 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblPassportNo" class="col-sm-2 col-form-label">Passport No:</label>
+            <label for="lblPoliceOfficer" class="col-sm-2 col-form-label">On Duty Officer:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtPassportNo" placeholder="Passport No." runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="lblPoliceOfficer" class="col-sm-2 col-form-label">Police Officer:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtPoliceOfficer" placeholder="Police Officer" runat="server">
+                <input type="text" class="form-control" id="txtPoliceOfficer" placeholder="Police Officer on Duty" runat="server">
             </div>
         </div>
 
@@ -105,7 +84,7 @@
         </div>
 
          <div class="form-group row">
-            <label for="lblInformationReceived" class="col-sm-2 col-form-label">Information Received:</label>
+            <label for="lblInformationReceived" class="col-sm-2 col-form-label">Received information:</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="txtInformationReceived" placeholder="Information Received" runat="server">
             </div>

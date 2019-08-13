@@ -67,15 +67,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtSex;
         
         /// <summary>
-        /// txtFatherHusbandName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFatherHusbandName;
-        
-        /// <summary>
         /// txtComplaintDate control.
         /// </summary>
         /// <remarks>

@@ -33,16 +33,15 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsPostMortem postmortem = new clsPostMortem();
-            postmortem.PmFIRNo = Convert.ToInt32(txtFirNo.Value);
-            postmortem.PmResultofPostMortem = txtResultofMortem.Value;
-            postmortem.PmSex = txtSex.Value;
-            postmortem.PmDateofDeath = txtDateofDeath.Value;
-            postmortem.PmDescriptionofCase = txtDescriptionofCase.Value;
-            postmortem.PmHouseName = txtHouseName.Value;
-            postmortem.PmDrName = txtDrName.Value;
-            postmortem.PmPoliceStation = txtPoliceStation.Value;
+            postmortem.POMOFIRNo = Convert.ToInt32(txtFirNo.Value);
+            postmortem.POMOInvestigationResult = txtResultofMortem.Value;
+            postmortem.POMOSex = txtSex.Value;
+            postmortem.POMODeathDate = txtDateofDeath.Value;
+            postmortem.POMOCaseDescription = txtDescriptionofCase.Value;
+            postmortem.POMODoctorName = txtDrName.Value;
+            postmortem.POMOPoliceStation = txtPoliceStation.Value;
 
-            postmortem.AddRecPostMortem(postmortem);
+            //postmortem.AddRecPostMortem(postmortem);
 
             try
             {
@@ -72,9 +71,9 @@ namespace CriminalRecordManagement
             txtSex.Value = "";
             txtDateofDeath.Value = "";
             txtDescriptionofCase.Value = "";
-            txtHouseName.Value = "";
             txtDrName.Value = "";
             txtPoliceStation.Value = "";
+            txtFirNo.Value = "";
 
         }
 

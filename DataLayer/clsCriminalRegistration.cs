@@ -9,24 +9,24 @@ namespace CriminalRecordManagement.DataLayer
 {
     public class clsCriminalRegistration
     {
-        private int criminalNo;
-        private string criminalName;
-        private string criminalNickName;
-        private int age;
-        private string occupation;
-        private string crimeType;
-        private string address;
-        private Boolean mostWanted;
+        private int _CRREID;
+        private string _CRREName;
+        private string _CRRENickName;
+        private int _CRREAge;
+        private string _CRRECrimeType;
+        private string _CRREAddress;
+        private Boolean _CRREMostWanted;
 
-        public int CriminalNo { get => criminalNo; set => criminalNo = value; }
-        public string CriminalName { get => criminalName; set => criminalName = value; }
-        public string CriminalNickName { get => criminalNickName; set => criminalNickName = value; }
-        public int Age { get => age; set => age = value; }
-        public string Occupation { get => occupation; set => occupation = value; }
-        public string CrimeType { get => crimeType; set => crimeType = value; }
-        public string Address { get => address; set => address = value; }
-        public Boolean MostWanted { get => mostWanted; set => mostWanted = value; }
         DataConnection dc = new DataConnection();
+
+        public int CRREID { get => _CRREID; }
+        public string CRREName { get => _CRREName; set => _CRREName = value; }
+        public string CRRENickName { get => _CRRENickName; set => _CRRENickName = value; }
+        public int CRREAge { get => _CRREAge; set => _CRREAge = value; }
+        public string CRRECrimeType { get => _CRRECrimeType; set => _CRRECrimeType = value; }
+        public string CRREAddress { get => _CRREAddress; set => _CRREAddress = value; }
+        public bool CRREMostWanted { get => _CRREMostWanted; set => _CRREMostWanted = value; }
+
         public DataSet getAllCriminalRecords()
         {
             DataSet ds = new DataSet();
@@ -49,22 +49,20 @@ namespace CriminalRecordManagement.DataLayer
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter prCrName = cmd.Parameters.Add("@CrName", SqlDbType.VarChar, 50);
-            SqlParameter prCrNickName = cmd.Parameters.Add("@CrNickName", SqlDbType.VarChar, 50);
-            SqlParameter prcrAge = cmd.Parameters.Add("@crAge ", SqlDbType.Int);
-            SqlParameter prcrOccupation = cmd.Parameters.Add("@crOccupation", SqlDbType.VarChar, 50);
-            SqlParameter prcrCrimeType = cmd.Parameters.Add("@crCrimeType", SqlDbType.VarChar, 50);
-            SqlParameter prcrAddress = cmd.Parameters.Add("@crAddress", SqlDbType.VarChar, 50);
-            SqlParameter prCrMostWanted = cmd.Parameters.Add("@CrMostWanted", SqlDbType.Bit);
+            SqlParameter prCrName = cmd.Parameters.Add("@CRREName", SqlDbType.VarChar, 50);
+            SqlParameter prCrNickName = cmd.Parameters.Add("@CRRENickName", SqlDbType.VarChar, 50);
+            SqlParameter prcrAge = cmd.Parameters.Add("@CRREAge ", SqlDbType.Int);
+            SqlParameter prcrCrimeType = cmd.Parameters.Add("@CRRECrimeType", SqlDbType.VarChar, 50);
+            SqlParameter prcrAddress = cmd.Parameters.Add("@CRREAddress", SqlDbType.VarChar, 50);
+            SqlParameter prCrMostWanted = cmd.Parameters.Add("@CRREMostWanted", SqlDbType.Bit);
 
 
-            prCrName.Value = criminalRegistration.criminalName;
-            prCrNickName.Value = criminalRegistration.criminalNickName;
-            prcrAge.Value = criminalRegistration.age;
-            prcrOccupation.Value = criminalRegistration.occupation;
-            prcrCrimeType.Value = criminalRegistration.crimeType;
-            prcrAddress.Value = criminalRegistration.address;
-            prCrMostWanted.Value = criminalRegistration.mostWanted;
+            prCrName.Value = criminalRegistration.CRREName;
+            prCrNickName.Value = criminalRegistration.CRRENickName;
+            prcrAge.Value = criminalRegistration.CRREAge;
+            prcrCrimeType.Value = criminalRegistration.CRRECrimeType;
+            prcrAddress.Value = criminalRegistration.CRREAddress;
+            prCrMostWanted.Value = criminalRegistration.CRREMostWanted;
                                  
 
             if (con.State != ConnectionState.Open)
@@ -84,7 +82,7 @@ namespace CriminalRecordManagement.DataLayer
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = dc.getConnection();
-            cmd.CommandText = "SELECT max( [CriminalID]) + 1 FROM [dbo].[tblCriminalRegister]";
+            cmd.CommandText = "SELECT max( [CRREID]) + 1 FROM [dbo].[tblCriminalRegistration]";
 
             object retuvalue = cmd.ExecuteScalar();
             if (retuvalue != DBNull.Value)

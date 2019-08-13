@@ -10,28 +10,21 @@ namespace CriminalRecordManagement.DataLayer
     public class clsPrisonerRegister
     {
 
-        //private int _PrisonerID;
-        private int _ChargeSheetNo;
-        private String _NickName;
-        private String _TypeofCrime;
-        private String _FamilyMembers;
-        private String _IdentificationMark;
-        private String _Height;
-        private int _Weight;
-        private String _Color;
+        private int _PRISChShNo;
+        private String _PRISCrimeDone;
+        private String _PRISIdMark;
+        private String _PRISHeight;
+        private int _PRISWeight;
+        private String _PRISColor;
 
         DataConnection dc = new DataConnection();
 
-        //public int PrisonerID { get => _PrisonerID; }
-        public int ChargeSheetNo { get => _ChargeSheetNo; set => _ChargeSheetNo = value; }
-        public string NickName { get => _NickName; set => _NickName = value; }
-        public string TypeofCrime { get => _TypeofCrime; set => _TypeofCrime = value; }
-        public string FamilyMembers { get => _FamilyMembers; set => _FamilyMembers = value; }
-        public string IdentificationMark { get => _IdentificationMark; set => _IdentificationMark = value; }
-        public string Height { get => _Height; set => _Height = value; }
-        public int Weight { get => _Weight; set => _Weight = value; }
-        public string Color { get => _Color; set => _Color = value; }
-
+        public int PRISChShNo { get => _PRISChShNo; set => _PRISChShNo = value; }
+        public string PRISCrimeDone { get => _PRISCrimeDone; set => _PRISCrimeDone = value; }
+        public string PRISIdMark { get => _PRISIdMark; set => _PRISIdMark = value; }
+        public string PRISHeight { get => _PRISHeight; set => _PRISHeight = value; }
+        public int PRISWeight { get => _PRISWeight; set => _PRISWeight = value; }
+        public string PRISColor { get => _PRISColor; set => _PRISColor = value; }
 
         public Boolean AddPrisoner()
         {
@@ -40,25 +33,19 @@ namespace CriminalRecordManagement.DataLayer
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            //SqlParameter prPrisonerID = cmd.Parameters.Add("@PrisonerID", SqlDbType.Int);
-            SqlParameter prChargeSheetNo = cmd.Parameters.Add("@PrChargeSheetNo", SqlDbType.Int);
-            SqlParameter prNickName = cmd.Parameters.Add("@PrNickName", SqlDbType.VarChar, 100);
-            SqlParameter prTypeofCrime = cmd.Parameters.Add("@PrTypeofCrime", SqlDbType.VarChar, 100);
-            SqlParameter prFamilyMembers = cmd.Parameters.Add("@PrFamilyMembers", SqlDbType.VarChar, 100);
-            SqlParameter prIdentificationMark = cmd.Parameters.Add("@PrIdentificationMark", SqlDbType.VarChar, 50);
-            SqlParameter prHeight = cmd.Parameters.Add("@PrHeight", SqlDbType.VarChar, 50);
-            SqlParameter prWeight = cmd.Parameters.Add("@prWeight", SqlDbType.Int);
-            SqlParameter prColor = cmd.Parameters.Add("@PrColor", SqlDbType.VarChar, 50);
+            SqlParameter prChargeSheetNo = cmd.Parameters.Add("@PRISChShNo", SqlDbType.Int);
+            SqlParameter prTypeofCrime = cmd.Parameters.Add("@PRISCrimeDone", SqlDbType.VarChar, 100);
+            SqlParameter prIdentificationMark = cmd.Parameters.Add("@PRISIdMark", SqlDbType.VarChar, 50);
+            SqlParameter prHeight = cmd.Parameters.Add("@PRISHeight", SqlDbType.VarChar, 50);
+            SqlParameter prWeight = cmd.Parameters.Add("@PRISWeight", SqlDbType.Int);
+            SqlParameter prColor = cmd.Parameters.Add("@PRISColor", SqlDbType.VarChar, 50);
 
-            //prPrisonerID.Value = this.PrisonerID;
-            prChargeSheetNo.Value = this.ChargeSheetNo;
-            prNickName.Value = this.NickName;
-            prTypeofCrime.Value = this.TypeofCrime;
-            prFamilyMembers.Value = this.FamilyMembers;
-            prIdentificationMark.Value = this.IdentificationMark;
-            prHeight.Value = this.Height;
-            prWeight.Value = this.Weight;
-            prColor.Value = this.Color;
+            prChargeSheetNo.Value = this.PRISChShNo;
+            prTypeofCrime.Value = this.PRISCrimeDone;
+            prIdentificationMark.Value = this.PRISIdMark;
+            prHeight.Value = this.PRISHeight;
+            prWeight.Value = this.PRISWeight;
+            prColor.Value = this.PRISColor;
 
 
             if (con.State != ConnectionState.Open)
@@ -79,7 +66,7 @@ namespace CriminalRecordManagement.DataLayer
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = dc.getConnection();
-            cmd.CommandText = "SELECT max( [PrisonerID]) + 1 FROM [dbo].[tblPrisonerRegister]";
+            cmd.CommandText = "SELECT max( [PRISID]) + 1 FROM [dbo].[tblPrisonerRegistration]";
 
             object retuvalue = cmd.ExecuteScalar();
             if (retuvalue != DBNull.Value)

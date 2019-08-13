@@ -29,7 +29,7 @@ namespace CriminalRecordManagement
                 displayCriminalCount();
                 //FillRadioButton();
             }
-            
+
         }
 
         //public void FillRadioButton()
@@ -41,13 +41,12 @@ namespace CriminalRecordManagement
         protected void btnSave_Click(object sender, EventArgs e)
         {
             clsCriminalRegistration crmnl = new clsCriminalRegistration();
-            crmnl.CriminalName = txtCriminalName.Value;
-            crmnl.CriminalNickName = txtcrNickName.Value;
-            crmnl.Age = Convert.ToInt32(txtAge.Value);
-            crmnl.Occupation = txtOccupation.Value;
-            crmnl.CrimeType = txtCrimeType.Value;
-            crmnl.Address = txtAddress.Value;
-            crmnl.MostWanted = Convert.ToBoolean(rdmostWatedYes.Checked ? 1 : 0) ;
+            crmnl.CRREName = txtCriminalName.Value;
+            crmnl.CRRENickName = txtcrNickName.Value;
+            crmnl.CRREAge = Convert.ToInt32(txtAge.Value);
+            crmnl.CRRECrimeType = txtCrimeType.Value;
+            crmnl.CRREAddress = txtAddress.Value;
+            crmnl.CRREMostWanted = Convert.ToBoolean(rdmostWatedYes.Checked ? 1 : 0);
 
             try
             {
@@ -71,12 +70,10 @@ namespace CriminalRecordManagement
 
         public void ClearAllTextBox()
         {
-            
+
             txtCriminalName.Value = "";
-            
             txtcrNickName.Value = "";
             txtAge.Value = "";
-            txtOccupation.Value = "";
             txtCrimeType.Value = "";
             txtAddress.Value = "";
         }
@@ -84,7 +81,7 @@ namespace CriminalRecordManagement
         public void displayCriminalCount()
         {
             clsCriminalRegistration count = new clsCriminalRegistration();
-            txtCriminalNo.Value =  count.getCriminalCount().ToString();
+            txtCriminalNo.Value = count.getCriminalCount().ToString();
         }
     }
 }

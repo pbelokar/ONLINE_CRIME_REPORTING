@@ -22,7 +22,7 @@
             <div class="form-group row">
                 <label for="lblID" class="col-sm-2 col-form-label">ID:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtID" placeholder="Most Wanted ID" runat="server">
+                    <input type="text" class="form-control" id="txtID" placeholder="ID" runat="server">
                 </div>
             </div>
 
@@ -30,13 +30,6 @@
                 <label for="lblName" class="col-sm-2 col-form-label">Name:</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="txtName" placeholder="Name" runat="server">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label for="lblNickName" class="col-sm-2 col-form-label">Nick Name:</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtNickName" placeholder="Nick Name" runat="server">
                 </div>
             </div>
 
@@ -55,9 +48,9 @@
             </div>
 
                        <div class="form-group row">
-                <label for="lblDescription" class="col-sm-2 col-form-label">Description:</label>
+                <label for="lblDescription" class="col-sm-2 col-form-label">Details:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="txtDescription" placeholder="Description" runat="server">
+                    <input type="text" class="form-control" id="txtDescription" placeholder="Description of the criminal" runat="server">
                 </div>
             </div>
 

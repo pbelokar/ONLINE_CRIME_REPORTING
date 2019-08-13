@@ -22,22 +22,22 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtChargeSheetNo;
         
         /// <summary>
-        /// txtNameofPoliceStation control.
+        /// txtPoliceStation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNameofPoliceStation;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPoliceStation;
         
         /// <summary>
-        /// txtDate control.
+        /// txtDateOfRegister control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDate;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDateOfRegister;
         
         /// <summary>
         /// txtFIRNo control.
@@ -49,13 +49,13 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtFIRNo;
         
         /// <summary>
-        /// txtDistrict control.
+        /// txtPlace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDistrict;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPlace;
         
         /// <summary>
         /// btnSave control.

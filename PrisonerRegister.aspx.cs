@@ -34,14 +34,12 @@ namespace CriminalRecordManagement
         {
 
             clsPrisonerRegister prisonerRegister = new clsPrisonerRegister();
-            prisonerRegister.ChargeSheetNo = Convert.ToInt32(txtChargeSheetNo.Value);
-            prisonerRegister.NickName = txtNickName.Value;
-            prisonerRegister.TypeofCrime = txtTypeofCrime.Value;
-            prisonerRegister.FamilyMembers = txtFamilyMember.Value;
-            prisonerRegister.IdentificationMark = txtIdentificationMark.Value;
-            prisonerRegister.Height = txtHeight.Value;
-            prisonerRegister.Weight = Convert.ToInt32(txtWeight.Value);
-            prisonerRegister.Color = txtColor.Value;
+            prisonerRegister.PRISChShNo = Convert.ToInt32(txtChargeSheetNo.Value);
+            prisonerRegister.PRISCrimeDone = txtTypeofCrime.Value;
+            prisonerRegister.PRISIdMark = txtIdentificationMark.Value;
+            prisonerRegister.PRISHeight = txtHeight.Value;
+            prisonerRegister.PRISWeight = Convert.ToInt32(txtWeight.Value);
+            prisonerRegister.PRISColor = txtColor.Value;
 
             try
             {
@@ -65,15 +63,14 @@ namespace CriminalRecordManagement
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+            ClearAll();
 
         }
 
         public void ClearAll()
         {
             txtChargeSheetNo.Value = "";
-            txtNickName.Value = "";
             txtTypeofCrime.Value = "";
-            txtFamilyMember.Value = "";
             txtIdentificationMark.Value = "";
             txtHeight.Value = "";
             txtWeight.Value = "";

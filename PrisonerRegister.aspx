@@ -33,23 +33,9 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblNickName" class="col-sm-2 col-form-label">Nick Name:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtNickName" placeholder="Nick Name" runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
             <label for="lblTypeOfCrime" class="col-sm-2 col-form-label">Crime:</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="txtTypeofCrime" placeholder="Type of Crime" runat="server">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label for="lblFamilyMember" class="col-sm-2 col-form-label">Family Member:</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtFamilyMember" placeholder="Family Member" runat="server">
             </div>
         </div>
 

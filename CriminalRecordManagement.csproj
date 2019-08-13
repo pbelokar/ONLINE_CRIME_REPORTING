@@ -109,6 +109,7 @@
     <Content Include="ChargeSheet.aspx" />
     <Content Include="ComplaintRegister.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

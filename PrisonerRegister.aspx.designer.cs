@@ -31,15 +31,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtChargeSheetNo;
         
         /// <summary>
-        /// txtNickName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtNickName;
-        
-        /// <summary>
         /// txtTypeofCrime control.
         /// </summary>
         /// <remarks>
@@ -47,15 +38,6 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtTypeofCrime;
-        
-        /// <summary>
-        /// txtFamilyMember control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFamilyMember;
         
         /// <summary>
         /// txtIdentificationMark control.

@@ -9,21 +9,19 @@ namespace CriminalRecordManagement.DataLayer
 {
     public class clsMostWanted
     {
-        private int _ID;
-        private string _Name;
-        private string _NickName;
-        private int _Age;
-        private string _Sex;
-        private string _Description;
+        private int _MOWAID;
+        private string _MOWAName;
+        private int _MOWAAge;
+        private string _MOWASex;
+        private string _MOWADetails;
 
         DataConnection dc = new DataConnection();
 
-        public int ID { get => _ID; set => _ID = value; }
-        public string Name { get => _Name; set => _Name = value; }
-        public int Age { get => _Age; set => _Age = value; }
-        public string Sex { get => _Sex; set => _Sex = value; }
-        public string Description { get => _Description; set => _Description = value; }
-        public string NickName { get => _NickName; set => _NickName = value; }
+        public int MOWAID { get => _MOWAID; set => _MOWAID = value; }
+        public string MOWAName { get => _MOWAName; set => _MOWAName = value; }
+        public int MOWAAge { get => _MOWAAge; set => _MOWAAge = value; }
+        public string MOWASex { get => _MOWASex; set => _MOWASex = value; }
+        public string MOWADetails { get => _MOWADetails; set => _MOWADetails = value; }
 
         public Boolean AddMostWanted()
         {
@@ -32,19 +30,17 @@ namespace CriminalRecordManagement.DataLayer
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.CommandType = CommandType.StoredProcedure;
 
-            SqlParameter prID = cmd.Parameters.Add("@mwID", SqlDbType.Int);
-            SqlParameter prName = cmd.Parameters.Add("@mwName", SqlDbType.VarChar, 100);
-            SqlParameter prNickName = cmd.Parameters.Add("@mwNickName", SqlDbType.VarChar, 100);
-            SqlParameter prAge = cmd.Parameters.Add("@mwAge", SqlDbType.Int);
-            SqlParameter prSex = cmd.Parameters.Add("@mwSex", SqlDbType.VarChar, 100);
-            SqlParameter prDescription = cmd.Parameters.Add("@mwDescription", SqlDbType.VarChar, 100);
+            SqlParameter prID = cmd.Parameters.Add("@MOWAID", SqlDbType.Int);
+            SqlParameter prName = cmd.Parameters.Add("@MOWAName", SqlDbType.VarChar, 100);
+            SqlParameter prAge = cmd.Parameters.Add("@MOWAAge", SqlDbType.Int);
+            SqlParameter prSex = cmd.Parameters.Add("@MOWASex", SqlDbType.VarChar, 100);
+            SqlParameter prDescription = cmd.Parameters.Add("@MOWADetails", SqlDbType.VarChar, 100);
 
-            prID.Value = this.ID;
-            prName.Value = this.Name;
-            prNickName.Value = this.NickName;
-            prAge.Value = this.Age;
-            prSex.Value = this.Sex;
-            prDescription.Value = this.Description;
+            prID.Value = this.MOWAID;
+            prName.Value = this.MOWAName;
+            prAge.Value = this.MOWAAge;
+            prSex.Value = this.MOWASex;
+            prDescription.Value = this.MOWADetails;
 
             if (con.State != ConnectionState.Open)
                 con.Open();

@@ -9,18 +9,18 @@ namespace CriminalRecordManagement.DataLayer
 {
     public class clsChargeSheet
     {
-        private int chargeSheetNo;
-        private string csNameofPoliceStation;
-        private DateTime csDate;
-        private int csFIRNo;
-        private string csDistrict;
+        private int _CHSHNo;
+        private string _CHSHPoliceStation;
+        private DateTime _CHSHDateOfRegister;
+        private int _CHSHFIRNo;
+        private string _CHSHPlace;
         DataConnection dc = new DataConnection();
 
-        public int ChargeSheetNo { get => chargeSheetNo; }
-        public string CsNameofPoliceStation { get => csNameofPoliceStation; set => csNameofPoliceStation = value; }
-        public DateTime CsDate { get => csDate; set => csDate = value; }
-        public int CsFIRNo { get => csFIRNo; set => csFIRNo = value; }
-        public string CsDistrict { get => csDistrict; set => csDistrict = value; }
+        public int CHSHNo { get => _CHSHNo; }
+        public string CHSHPoliceStation { get => _CHSHPoliceStation; set => _CHSHPoliceStation = value; }
+        public DateTime CHSHDateOfRegister { get => _CHSHDateOfRegister; set => _CHSHDateOfRegister = value; }
+        public int CHSHFIRNo { get => _CHSHFIRNo; set => _CHSHFIRNo = value; }
+        public string CHSHPlace { get => _CHSHPlace; set => _CHSHPlace = value; }
 
         public Boolean AddChargeSheet()
         {
@@ -28,15 +28,15 @@ namespace CriminalRecordManagement.DataLayer
             SqlConnection con = dc.getConnection();
             SqlCommand cmd = new SqlCommand(SQL, con);
             cmd.CommandType = CommandType.StoredProcedure;
-            SqlParameter prNameofPoliceStation = cmd.Parameters.Add("@csNameofPoliceStation", SqlDbType.VarChar, 100);
-            SqlParameter prDate = cmd.Parameters.Add("@csDate", SqlDbType.DateTime);
-            SqlParameter prFIRNo = cmd.Parameters.Add("@csFIRNo", SqlDbType.Int); 
-            SqlParameter prDistrict = cmd.Parameters.Add("@csDistrict", SqlDbType.VarChar, 100);
+            SqlParameter prNameofPoliceStation = cmd.Parameters.Add("@CHSHPoliceStation", SqlDbType.VarChar, 100);
+            SqlParameter prDate = cmd.Parameters.Add("@CHSHDateOfRegister", SqlDbType.DateTime);
+            SqlParameter prFIRNo = cmd.Parameters.Add("@CHSHFIRNo", SqlDbType.Int); 
+            SqlParameter prDistrict = cmd.Parameters.Add("@CHSHPlace", SqlDbType.VarChar, 100);
 
-            prNameofPoliceStation.Value = this.CsNameofPoliceStation;
-            prDate.Value = this.CsDate;
-            prFIRNo.Value = this.CsFIRNo;
-            prDistrict.Value = this.csDistrict;
+            prNameofPoliceStation.Value = this.CHSHPoliceStation;
+            prDate.Value = this.CHSHDateOfRegister;
+            prFIRNo.Value = this.CHSHFIRNo;
+            prDistrict.Value = this.CHSHPlace;
 
 
 
@@ -58,7 +58,7 @@ namespace CriminalRecordManagement.DataLayer
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = dc.getConnection();
-            cmd.CommandText = "SELECT max( [ChargeSheetNo]) + 1 FROM [dbo].[tblChargeSheet]";
+            cmd.CommandText = "SELECT max([CHSHNo]) + 1 FROM [dbo].[tblChargeSheetRegister]";
 
             object retuvalue = cmd.ExecuteScalar();
             if (retuvalue != DBNull.Value)

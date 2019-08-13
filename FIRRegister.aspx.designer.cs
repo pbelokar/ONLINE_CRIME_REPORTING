@@ -40,15 +40,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtDate;
         
         /// <summary>
-        /// txtTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtTime;
-        
-        /// <summary>
         /// txtTypeofInformation control.
         /// </summary>
         /// <remarks>
@@ -85,15 +76,6 @@ namespace CriminalRecordManagement {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtAct;
         
         /// <summary>
-        /// txtDistrict control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDistrict;
-        
-        /// <summary>
         /// txtInformantAddress control.
         /// </summary>
         /// <remarks>
@@ -101,15 +83,6 @@ namespace CriminalRecordManagement {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtInformantAddress;
-        
-        /// <summary>
-        /// txtPassportNo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPassportNo;
         
         /// <summary>
         /// txtPoliceOfficer control.

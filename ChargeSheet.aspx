@@ -26,16 +26,16 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblNameOfPoliceStation" class="col-sm-2 col-form-label">Police Station:</label>
+            <label for="lblPoliceStation" class="col-sm-2 col-form-label">Police Station:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtNameofPoliceStation" placeholder="Name of Police Station" runat="server">
+                <input type="text" class="form-control" id="txtPoliceStation" placeholder="Name of Police Station" runat="server">
             </div>
         </div>
 
         <div class="form-group row">
-            <label for="lblDate" class="col-sm-2 col-form-label">Date:</label>
+            <label for="lblDateOfRegister" class="col-sm-2 col-form-label">Date:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtDate" placeholder="Date (YYYY/MM/DD HH24:MI:SS)" runat="server">
+                <input type="text" class="form-control" id="txtDateOfRegister" placeholder="Date of Register(YYYY/MM/DD)" runat="server">
             </div>
         </div>
 
@@ -47,9 +47,9 @@
         </div>
 
         <div class="form-group row">
-            <label for="lblDistrict" class="col-sm-2 col-form-label">District:</label>
+            <label for="lblPlace" class="col-sm-2 col-form-label">Place:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="txtDistrict" placeholder="District" runat="server">
+                <input type="text" class="form-control" id="txtPlace" placeholder="Place of Occurence" runat="server">
             </div>
         </div>
 
